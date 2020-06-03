@@ -3,7 +3,7 @@ const mdxPrism = require('mdx-prism');
 const withMdxEnhanced = require('next-mdx-enhanced');
 
 module.exports = withMdxEnhanced({
-    layoutPath: 'layouts',
+    layoutPath: './src/layouts',
     defaultLayout: true,
     remarkPlugins: [
         require('remark-autolink-headings'),
@@ -19,9 +19,6 @@ module.exports = withMdxEnhanced({
         })
     }
 })({
-    experimental: {
-        modern: true
-    },
     webpack: (config, { isServer }) => {
         if (isServer) {
             require('./scripts/generate-sitemap');

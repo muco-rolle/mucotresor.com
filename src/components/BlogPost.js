@@ -1,5 +1,6 @@
 import React from 'react';
 import NextLink from 'next/link';
+import { getSlug } from 'utils';
 import { useColorMode, Heading, Text, Flex, Box, Link } from '@chakra-ui/core';
 
 export const BlogPost = (frontMatter) => {
@@ -10,10 +11,9 @@ export const BlogPost = (frontMatter) => {
         dark: 'gray.400'
     };
 
-    const slug = frontMatter.__resourcePath
-        .replace('blog/', '')
-        .replace('.mdx', '');
+    const slug = getSlug(frontMatter.__resourcePath);
 
+    console.log(slug);
     return (
         <NextLink href={`blog/${slug}`} passHref>
             <Link w="100%" _hover={{ textDecoration: 'none' }}>

@@ -10,11 +10,10 @@ import {
 } from '@chakra-ui/core';
 
 import { BlogSeo, Container } from 'components';
+import { getSlug } from 'utils';
 
 export default (frontMatter) => {
-    const slug = frontMatter.__resourcePath
-        .replace('blog/', '')
-        .replace('.mdx', '');
+    const slug = getSlug(frontMatter.__resourcePath);
 
     return ({ children }) => {
         const { colorMode } = useColorMode();
