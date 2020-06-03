@@ -1,9 +1,70 @@
 import React from 'react';
-import { Flex, Link, IconButton } from '@chakra-ui/core';
+import { Flex, IconButton, Tooltip, useColorMode } from '@chakra-ui/core';
+import { Contact } from './Contact';
+import { FaWhatsapp } from 'react-icons/fa';
+import { FiTwitter, FiFacebook } from 'react-icons/fi';
 
-export const Contacts = () => (
-    <Flex justify="center" mb={4}>
-        <Link href="https://twitter.com/leeerob" title="Twitter" isExternal>
+export const Contacts = () => {
+    const { colorMode } = useColorMode();
+    return (
+        <Flex justify="start" mt={4} mb={4}>
+            <Contact
+                url="https://github.com/muco-rolle"
+                mr={2}
+                aria-label="github"
+                icon="github"
+            />
+
+            <Tooltip
+                hasArrow
+                label="+257 69151210"
+                placement="top"
+                bg={colorMode === 'light' ? 'gray.900' : 'gray.100'}
+                aria-label="whatsapp number"
+            >
+                <IconButton
+                    aria-label="whatsapp number"
+                    rounded="100px"
+                    _focus={{ border: 'none' }}
+                    icon={FaWhatsapp}
+                    mr={4}
+                />
+            </Tooltip>
+
+            <Contact
+                url="https://twitter.com/Muco31073256"
+                mr={2}
+                aria-label="Twitter"
+                icon="twitter"
+            />
+
+            <Contact
+                url="https://twitter.com/Muco31073256"
+                mr={2}
+                aria-label="Twitter"
+                icon="linkedin"
+            />
+
+            <Contact
+                url="mailto:mucotresor@gmail.com"
+                mr={2}
+                aria-label="Twitter"
+                icon="mail"
+            />
+
+            <Contact
+                url="mailto:mucotresor@gmail.com"
+                mr={2}
+                aria-label="Twitter"
+                icon={FiFacebook}
+            />
+
+            {/* {<Link
+        
+            href="https://twitter.com/leeerob"
+            title="Twitter"
+            target="_blank"
+        >
             <IconButton
                 aria-label="Twitter"
                 icon="twitter"
@@ -42,6 +103,7 @@ export const Contacts = () => (
                 color="gray.500"
                 variant="ghost"
             />
-        </Link>
-    </Flex>
-);
+        </Link>} */}
+        </Flex>
+    );
+};

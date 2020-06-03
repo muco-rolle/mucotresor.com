@@ -16,7 +16,11 @@ export const BlogPost = (frontMatter) => {
     console.log(slug);
     return (
         <NextLink href={`blog/${slug}`} passHref>
-            <Link w="100%" _hover={{ textDecoration: 'none' }}>
+            <Link
+                w="100%"
+                _hover={{ textDecoration: 'none' }}
+                _focus={{ border: 'none' }}
+            >
                 <Box mb={8} display="block" width="100%">
                     <Flex
                         width="100%"

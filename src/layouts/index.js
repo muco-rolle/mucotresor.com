@@ -72,7 +72,7 @@ export default (frontMatter) => {
                                     color={textColor[colorMode]}
                                 >
                                     {frontMatter.by}
-                                    {'Lee Robinson / '}
+                                    {'Muco Trésor/ '}
                                     {format(
                                         parseISO(frontMatter.publishedAt),
                                         'MMMM dd, yyyy'

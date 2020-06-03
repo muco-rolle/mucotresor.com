@@ -8,7 +8,7 @@ import {
     Link
 } from '@chakra-ui/core';
 
-import { Container } from 'components';
+import { Container, Contacts } from 'components';
 
 const Index = () => {
     const { colorMode } = useColorMode();
@@ -51,6 +51,8 @@ const Index = () => {
                             EDGCo
                         </Link>
                     </Text>
+
+                    <Contacts />
                 </Flex>
             </Stack>
         </Container>
