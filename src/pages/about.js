@@ -54,7 +54,7 @@ export const About = () => {
                     </Heading>
                     <Avatar
                         size="2xl"
-                        name="Muco Tresor"
+                        name="Muco Trésor"
                         src="./assets/muco.jpg"
                         textAlign="center"
                     />

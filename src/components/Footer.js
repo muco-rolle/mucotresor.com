@@ -2,17 +2,20 @@ import React from 'react';
 import { Flex, Link, IconButton } from '@chakra-ui/core';
 
 export const Contacts = () => (
-    <Flex justify="center" mb={4}>
-        <Link href="https://twitter.com/leeerob" title="Twitter" isExternal>
-            <IconButton
-                aria-label="Twitter"
-                icon="twitter"
-                size="lg"
-                color="gray.500"
-                variant="ghost"
-            />
-        </Link>
-        <Link href="https://github.com/leerob" title="GitHub" isExternal>
+    <Flex justify="start">
+        <IconButton
+            as="a"
+            aria-label="Twitter"
+            icon="twitter"
+            size="lg"
+            color="gray.500"
+            variant="ghost"
+            href="https://twitter.com/Muco31073256"
+            title="Twitter"
+            isExternal
+            borderRadius="100%"
+        />
+        <Link href="https://github.com/muco-rolle" title="GitHub" isExternal>
             <IconButton
                 aria-label="GitHub"
                 icon="github"
@@ -22,7 +25,7 @@ export const Contacts = () => (
             />
         </Link>
         <Link
-            href="https://www.linkedin.com/in/leejamesrobinson/"
+            href="https://www.linkedin.com/in/muco-tresor-949b131a7/"
             title="LinkedIn"
             isExternal
         >
@@ -34,7 +37,7 @@ export const Contacts = () => (
                 variant="ghost"
             />
         </Link>
-        <Link href="mailto:me@leerob.io" title="Email" isExternal>
+        <Link href="mailto:mucotresor@gmail.com" title="Email" isExternal>
             <IconButton
                 aria-label="Email"
                 icon="mail"

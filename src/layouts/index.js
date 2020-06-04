@@ -9,12 +9,11 @@ import {
     Avatar
 } from '@chakra-ui/core';
 
-import { BlogSeo, Container } from 'components';
+import { BlogSeo, Container, Comments } from 'components';
+import { getSlug } from 'utils';
 
 export default (frontMatter) => {
-    const slug = frontMatter.__resourcePath
-        .replace('blog/', '')
-        .replace('.mdx', '');
+    const slug = getSlug(frontMatter.__resourcePath);
 
     return ({ children }) => {
         const { colorMode } = useColorMode();
@@ -73,7 +72,7 @@ export default (frontMatter) => {
                                     color={textColor[colorMode]}
                                 >
                                     {frontMatter.by}
-                                    {'Lee Robinson / '}
+                                    {'Muco Trésor/ '}
                                     {format(
                                         parseISO(frontMatter.publishedAt),
                                         'MMMM dd, yyyy'
@@ -91,6 +90,8 @@ export default (frontMatter) => {
                         </Flex>
                     </Flex>
                     {children}
+
+                    {/* <Comments /> */}
                 </Stack>
             </Container>
         );
