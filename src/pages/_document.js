@@ -23,6 +23,16 @@ class MyDocument extends Document {
                         src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
                     />
 
+                    {/* github comments */}
+                    <link
+                        rel="stylesheet"
+                        href="https://unpkg.com/octomments/build/ocs-ui.min.css"
+                    />
+                    <script
+                        async
+                        src="https://unpkg.com/octomments/build/ocs.min.js"
+                    ></script>
+
                     <script
                         // eslint-disable-next-line react/no-danger
                         dangerouslySetInnerHTML={{

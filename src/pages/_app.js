@@ -20,19 +20,6 @@ Router.events.on('routeChangeComplete', () => NProgress.done());
 Router.events.on('routeChangeError', () => NProgress.done());
 
 const App = ({ Component, pageProps }) => {
-    useEffect(() => {
-        if (process.env.NODE_ENV === 'production') {
-            const tracker = window.document.createElement('script');
-            const firstScript = window.document.querySelectorAll('script')[0];
-
-            tracker.defer = true;
-            tracker.setAttribute('site', 'UVWLEUFH');
-            tracker.setAttribute('spa', 'auto');
-            tracker.src = 'https://cdn.usefathom.com/script.js';
-            firstScript.parentNode.insertBefore(tracker, firstScript);
-        }
-    }, []);
-
     return (
         <ThemeProvider theme={theme}>
             <MDXProvider components={MDXComponents}>

@@ -9,7 +9,7 @@ import {
     Avatar
 } from '@chakra-ui/core';
 
-import { BlogSeo, Container } from 'components';
+import { BlogSeo, Container, Comments } from 'components';
 import { getSlug } from 'utils';
 
 export default (frontMatter) => {
@@ -90,6 +90,8 @@ export default (frontMatter) => {
                         </Flex>
                     </Flex>
                     {children}
+
+                    {/* <Comments /> */}
                 </Stack>
             </Container>
         );

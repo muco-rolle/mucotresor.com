@@ -1,14 +1,19 @@
 import React from 'react';
+import NextLink from 'next/link';
 import {
     useColorMode,
     Heading,
     Text,
     Flex,
     Stack,
-    Link
+    Link,
+    Button
 } from '@chakra-ui/core';
 
-import { Container, Contacts } from 'components';
+import { Container, Contacts, BlogPost } from 'components';
+
+// eslint-disable-next-line import/no-unresolved, import/extensions
+import { frontMatter as blogPosts } from './blog/**/*.mdx';
 
 const Index = () => {
     const { colorMode } = useColorMode();
@@ -16,6 +21,14 @@ const Index = () => {
         light: 'gray.700',
         dark: 'gray.400'
     };
+
+    const filteredBlogPosts = blogPosts
+        .sort(
+            (a, b) =>
+                Number(new Date(b.publishedAt)) -
+                Number(new Date(a.publishedAt))
+        )
+        .slice(0, 4);
 
     return (
         <Container>
@@ -53,6 +66,35 @@ const Index = () => {
                     </Text>
 
                     <Contacts />
+
+                    <Flex
+                        flexDirection="column"
+                        justifyContent="flex-start"
+                        alignItems="flex-start"
+                        maxWidth="700px"
+                        mt={8}
+                    >
+                        <Heading
+                            letterSpacing="tight"
+                            mb={4}
+                            size="xl"
+                            fontWeight={700}
+                        >
+                            Lastest Posts
+                        </Heading>
+                        {filteredBlogPosts.map((frontMatter) => (
+                            <BlogPost
+                                key={frontMatter.title}
+                                {...frontMatter}
+                            />
+                        ))}
+
+                        <NextLink href="/blog">
+                            <Link _hover={{ textDecoration: 'none' }}>
+                                <Button as="a">Read more</Button>
+                            </Link>
+                        </NextLink>
+                    </Flex>
                 </Flex>
             </Stack>
         </Container>

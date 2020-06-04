@@ -3,8 +3,8 @@
 ## Running Locally
 
 ```bash
-$ git clone https://github.com/leerob/leerob.io.git
-$ cd leerob.io
+$ git clone https://github.com/muco-rolle/mucotresor.com.git
+$ cd mucotresor.com
 $ yarn
 $ yarn dev
 ```

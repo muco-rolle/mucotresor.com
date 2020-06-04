@@ -6,3 +6,4 @@ export * from './MDXComponents';
 export * from './ProjectCard';
 export * from './header';
 export * from './contacts';
+export * from './comments';
