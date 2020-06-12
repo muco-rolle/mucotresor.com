@@ -7914,6 +7914,11 @@ react-tweet-embed@1.2.2:
   resolved "https://registry.yarnpkg.com/react-tweet-embed/-/react-tweet-embed-1.2.2.tgz#b518510a6e6ef17609f9c9b16bc4775624730d8a"
   integrity sha512-Y932BlSaJsDUsKDucC2opzzd+uhc0YNhrlTa/4Beb2be1od+AjLGo6Fhuo2wPT0D+fF4VTXOyoZyA8Yc88RdYA==
 
+react-utterances@^0.6.4:
+  version "0.6.4"
+  resolved "https://registry.yarnpkg.com/react-utterances/-/react-utterances-0.6.4.tgz#bf8da25d188bf7b2c0a873700e534b901422add6"
+  integrity sha512-g+oeVCUxGKj4atlql3P+IyGcbxU+GNhbRoOPPzkfQIex85Y92UJU0PnzFnA+D3zJwSUTVT3Rna5htEuvz/rqAg==
+
 react@16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
@@ -9981,6 +9986,11 @@ which@^2.0.1:
   integrity sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==
   dependencies:
     isexe "^2.0.0"
+
+with-utterances@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/with-utterances/-/with-utterances-1.5.0.tgz#fe2cd9cf76e8d6db8563f6318c951735211ea752"
+  integrity sha512-ToMCOuxSNXYLxhNcywe3jO9hYO3rD8N7EL1P+ZauKERgU1sZljP5UxAA5Z0X/5MaFpZvoaCse4lNN9uL7nTY7Q==
 
 word-wrap@~1.2.3:
   version "1.2.3"

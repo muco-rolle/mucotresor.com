@@ -40,8 +40,6 @@ const Blog = () => {
             frontMatter.title.toLowerCase().includes(searchValue.toLowerCase())
         );
 
-    console.log(filteredBlogPosts);
-
     return (
         <>
             <NextSeo

@@ -39,23 +39,23 @@ export const Contacts = () => {
             />
 
             <Contact
-                url="https://twitter.com/Muco31073256"
+                url="https://www.linkedin.com/in/muco-tresor-949b131a7/"
                 mr={2}
-                aria-label="Twitter"
+                aria-label="Linkedin"
                 icon="linkedin"
             />
 
             <Contact
                 url="mailto:mucotresor@gmail.com"
                 mr={2}
-                aria-label="Twitter"
+                aria-label="Gmail"
                 icon="mail"
             />
 
             <Contact
-                url="mailto:mucotresor@gmail.com"
+                url="https://www.facebook.com/tresor.muco/"
                 mr={2}
-                aria-label="Twitter"
+                aria-label="Facebook"
                 icon={FiFacebook}
             />
 

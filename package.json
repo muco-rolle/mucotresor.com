@@ -58,13 +58,15 @@
         "react-dom": "16.13.1",
         "react-icons": "^3.10.0",
         "react-tweet-embed": "1.2.2",
+        "react-utterances": "^0.6.4",
         "reading-time": "1.2.0",
         "remark-autolink-headings": "6.0.0",
         "remark-capitalize": "1.1.0",
         "remark-code-titles": "0.1.1",
         "remark-slug": "6.0.0",
         "typeface-inconsolata": "^0.0.72",
-        "unsplash-js": "6.0.0"
+        "unsplash-js": "6.0.0",
+        "with-utterances": "^1.5.0"
     },
     "devDependencies": {
         "eslint": "6.8.0",

@@ -94,7 +94,7 @@ export const About = () => {
 
                     <Text color={secondaryTextColor[colorMode]} mb={3}>
                         <strong>
-                            Do you need someone to guide on your learning
+                            Do you need someone to guide you on your learning
                             journey?
                         </strong>{' '}
                         <br />
@@ -104,8 +104,8 @@ export const About = () => {
                         </strong>{' '}
                         <br />
                         <strong>
-                            or Do you want a great developer to hire and help
-                            you grow your business
+                            or Do you want a developer to hire and help you grow
+                            your business
                         </strong>{' '}
                         <br />
                         my contact infos are below:
