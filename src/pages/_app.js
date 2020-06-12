@@ -1,14 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Router from 'next/router';
 import NProgress from 'nprogress';
 import { MDXProvider } from '@mdx-js/react';
+import { ThemeProvider, ColorModeProvider } from '@chakra-ui/core';
 
 import { DefaultSeo } from 'next-seo';
-import { GlobalStyles } from 'components';
-import { ThemeProvider, ColorModeProvider } from '@chakra-ui/core';
 import { SEO } from 'next-seo.config';
 import { theme } from 'theme';
-import { MDXComponents } from 'components';
+import { GlobalStyles, DocumentHead, MDXComponents } from 'components';
 
 import 'typeface-inconsolata';
 
@@ -25,6 +24,7 @@ const App = ({ Component, pageProps }) => {
             <MDXProvider components={MDXComponents}>
                 <ColorModeProvider value="light">
                     <GlobalStyles>
+                        <DocumentHead />
                         <DefaultSeo {...SEO} />
                         <Component {...pageProps} />
                     </GlobalStyles>

@@ -7,3 +7,4 @@ export * from './ProjectCard';
 export * from './header';
 export * from './contacts';
 export * from './comments';
+export * from './document-head';
