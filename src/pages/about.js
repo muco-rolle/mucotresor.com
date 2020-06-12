@@ -62,7 +62,7 @@ export const About = () => {
 
                 <Box>
                     <Text color={secondaryTextColor[colorMode]} mb={3}>
-                        I'm Fullstack developer, I build things with code,
+                        I'm a Fullstack developer, I build things with code,
                         mainly with <strong>Javascript/Typescript,</strong>{' '}
                         <strong>ReactJS, </strong>
                         <strong>NodeJS, </strong>
@@ -79,17 +79,17 @@ export const About = () => {
                     </Text>
 
                     <Text color={secondaryTextColor[colorMode]} mb={3}>
-                        Back in 2018 I graduated in a computer science and
+                        Back in 2018, I graduated in a computer science and
                         telecoms school, before I enrolled my primary goal was
                         to learn computer programming, but I was not satisfied
-                        with how we learned programming, so I decided to take
+                        with how we learned to program, so I decided to take
                         time and learn it on my own.
                     </Text>
 
                     <Text color={secondaryTextColor[colorMode]} mb={3}>
                         I made a lot of mistakes along the way, but thanks to
                         the community of programmers, I learned from them and
-                        now I'm on mission to help you out.
+                        now I'm on a mission to help you out.
                     </Text>
 
                     <Text color={secondaryTextColor[colorMode]} mb={3}>
@@ -99,8 +99,8 @@ export const About = () => {
                         </strong>{' '}
                         <br />
                         <strong>
-                            Do you want someone to help you on your cool project
-                            you're working on?
+                            Do you want someone to help you with the cool
+                            project you're working on?
                         </strong>{' '}
                         <br />
                         <strong>
@@ -108,7 +108,7 @@ export const About = () => {
                             your business
                         </strong>{' '}
                         <br />
-                        my contact infos are below:
+                        my contact Infos are below:
                     </Text>
 
                     <Contacts />

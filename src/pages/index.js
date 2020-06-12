@@ -50,7 +50,7 @@ const Index = () => {
                         Hello, I’m Muco Trésor
                     </Heading>
                     <Text color={secondaryTextColor[colorMode]}>
-                        I'm Fullstack developer, I build things with code,
+                        I'm a Fullstack developer, I build things with code,
                         mainly with <strong>Javascript/Typescript,</strong>{' '}
                         <strong>ReactJS, </strong>
                         <strong>NodeJS, </strong>
@@ -63,6 +63,7 @@ const Index = () => {
                         >
                             EDGCo
                         </Link>
+                        .
                     </Text>
 
                     <Contacts />
