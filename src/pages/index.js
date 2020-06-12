@@ -89,11 +89,13 @@ const Index = () => {
                             />
                         ))}
 
-                        <NextLink href="/blog">
-                            <Link _hover={{ textDecoration: 'none' }}>
-                                <Button as="a">Read more</Button>
-                            </Link>
-                        </NextLink>
+                        {filteredBlogPosts.length > 3 ? (
+                            <NextLink href="/blog">
+                                <Link _hover={{ textDecoration: 'none' }}>
+                                    <Button as="a">Read more</Button>
+                                </Link>
+                            </NextLink>
+                        ) : null}
                     </Flex>
                 </Flex>
             </Stack>
