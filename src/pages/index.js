@@ -50,8 +50,9 @@ const Index = () => {
                         Hello, I’m Muco Trésor
                     </Heading>
                     <Text color={secondaryTextColor[colorMode]}>
-                        I'm a Fullstack developer, I build things with code,
-                        mainly with <strong>Javascript/Typescript,</strong>{' '}
+                        I'm a self taught Fullstack developer, I build things
+                        with code, mainly with{' '}
+                        <strong>Javascript/Typescript,</strong>{' '}
                         <strong>ReactJS, </strong>
                         <strong>NodeJS, </strong>
                         <strong>and GraphQL</strong>. I'm currently working as
