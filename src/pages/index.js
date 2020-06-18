@@ -50,8 +50,9 @@ const Index = () => {
                         Hello, I’m Muco Trésor
                     </Heading>
                     <Text color={secondaryTextColor[colorMode]}>
-                        I'm Fullstack developer, I build things with code,
-                        mainly with <strong>Javascript/Typescript,</strong>{' '}
+                        I'm a self taught Fullstack developer, I build things
+                        with code, mainly with{' '}
+                        <strong>Javascript/Typescript,</strong>{' '}
                         <strong>ReactJS, </strong>
                         <strong>NodeJS, </strong>
                         <strong>and GraphQL</strong>. I'm currently working as
@@ -63,6 +64,7 @@ const Index = () => {
                         >
                             EDGCo
                         </Link>
+                        .
                     </Text>
 
                     <Contacts />
@@ -89,11 +91,13 @@ const Index = () => {
                             />
                         ))}
 
-                        <NextLink href="/blog">
-                            <Link _hover={{ textDecoration: 'none' }}>
-                                <Button as="a">Read more</Button>
-                            </Link>
-                        </NextLink>
+                        {filteredBlogPosts.length > 3 ? (
+                            <NextLink href="/blog">
+                                <Link _hover={{ textDecoration: 'none' }}>
+                                    <Button as="a">Read more</Button>
+                                </Link>
+                            </NextLink>
+                        ) : null}
                     </Flex>
                 </Flex>
             </Stack>

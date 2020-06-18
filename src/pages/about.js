@@ -62,11 +62,12 @@ export const About = () => {
 
                 <Box>
                     <Text color={secondaryTextColor[colorMode]} mb={3}>
-                        I'm Fullstack developer, I build things with code,
-                        mainly with <strong>Javascript/Typescript,</strong>{' '}
+                        Hello, I'm<strong> Muco Trésor</strong>, a self taught
+                        Fullstack developer, I build things with code, mainly
+                        with <strong>Javascript/Typescript,</strong>{' '}
                         <strong>ReactJS, </strong>
                         <strong>NodeJS, </strong>
-                        <strong>and GraphQL</strong>. I'm currently working as
+                        <strong>and GraphQL</strong>. I'm currently working as a
                         Freelance developer at{' '}
                         <Link
                             href="https://edgco.fr"
@@ -79,36 +80,23 @@ export const About = () => {
                     </Text>
 
                     <Text color={secondaryTextColor[colorMode]} mb={3}>
-                        Back in 2018 I graduated in a computer science and
-                        telecoms school, before I enrolled my primary goal was
-                        to learn computer programming, but I was not satisfied
-                        with how we learned programming, so I decided to take
-                        time and learn it on my own.
+                        Back in 2018, I graduated in a computer science and
+                        telecoms school, my primary goal was to learn computer
+                        programming, but I was not satisfied with how we learned
+                        to program, so I decided to take time and learn it on my
+                        own.
                     </Text>
 
                     <Text color={secondaryTextColor[colorMode]} mb={3}>
                         I made a lot of mistakes along the way, but thanks to
-                        the community of programmers, I learned from them and
-                        now I'm on mission to help you out.
-                    </Text>
-
-                    <Text color={secondaryTextColor[colorMode]} mb={3}>
-                        <strong>
-                            Do you need someone to guide on your learning
-                            journey?
-                        </strong>{' '}
-                        <br />
-                        <strong>
-                            Do you want someone to help you on your cool project
-                            you're working on?
-                        </strong>{' '}
-                        <br />
-                        <strong>
-                            or Do you want a great developer to hire and help
-                            you grow your business
-                        </strong>{' '}
-                        <br />
-                        my contact infos are below:
+                        the community of programmers, I learned from them, and
+                        now, I think it's my time to give something in return,
+                        I'm on a mission to help you, motivate you, and give
+                        some tips that can help you to advance in programming
+                        journey. As I know how hard it is to teach yourself
+                        programming reach out to me if you need help I'll be
+                        glad to help. Get in touch with me on any of these
+                        platforms below.
                     </Text>
 
                     <Contacts />

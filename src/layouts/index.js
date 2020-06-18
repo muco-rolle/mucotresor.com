@@ -9,10 +9,10 @@ import {
     Avatar
 } from '@chakra-ui/core';
 
-import { BlogSeo, Container, Comments } from 'components';
+import { BlogSeo, Container, Comments, Utterances } from 'components';
 import { getSlug } from 'utils';
 
-export default (frontMatter) => {
+const Layout = (frontMatter) => {
     const slug = getSlug(frontMatter.__resourcePath);
 
     return ({ children }) => {
@@ -92,8 +92,11 @@ export default (frontMatter) => {
                     {children}
 
                     {/* <Comments /> */}
+                    {/* <Utterances repo="muco-rolle/mucotresor.com" /> */}
                 </Stack>
             </Container>
         );
     };
 };
+
+export default Layout;
