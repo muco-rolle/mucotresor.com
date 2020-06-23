@@ -1,30 +1,32 @@
 ---
-title: 'Inspire Me episode 1: Meet a Teen Burundian Developer'
+title: 'Inspire me - episode 1: Meet a Teen Burundian Self-taught Developer'
 publishedAt: '2020-06-18'
-summary: 'My name is Freeman Irabaruta, I liked how a hacker would hack a system in minutes with a mind-blowing typing speed. I really wanted to be able to do that, I started doing some research...'
+summary: "Hello again, today is a different topic, I'm starting a series entitled Inspire me which will include topics to inspire you, and push you to pursue your dream. So today we have a special guest, a talented young software engineer known as..."
 ---
 
-**Tresor:** I'm happy to have you, Snow, on my first episode of Inspire me.
-Can you please introduce yourself, and tell us a little bit about you ?
+import { Contact } from 'components';
+import { Flex } from '@chakra-ui/core';
+
+Hello again, today is a different topic, I'm starting a series entitled **Inspire me** which will include topics to inspire you, and push you to pursue your dream. So today we have a special guest, a talented young software engineer known as Snowblade. I wrote our discussion, you're going to read it in this form: **Trésor(me):** Asking a question, and **Freeman(Snowblade):** Replying question
+
+**Tresor:** Hello, Snow, I'm happy to have you on my first episode of Inspire me. Can you please introduce yourself, and tell us a little bit about you?
 
 **Freeman:**
-_Ok, my name is Freeman Irabaruta, I'm 16y.o and I'm currently a student at LLT(Lycée du Lac Tanganyika), I'm a software engineer who focuses on low-level programming and web programming, I also like other things like reading books and Japanese mangas I also like watching and playing volleyball_
+_Ok, my name is **Freeman Irabaruta** on social media I'm known as **Snowblade**, I'm 16y.o and I'm currently a student at LLT(Lycée du Lac Tanganyika), I'm a software engineer who focuses on low-level programming and web programming, I also like other things like reading books, Japanese mangas, and I also like watching and playing volleyball._
 
-**Tresor:** Cool, Snow, it's not common to see young people at your age in Burundi get involved in programming how the idea came to you?
+**Tresor:** Cool, Snow, it's not common to see young people at your age in Burundi get involved in programming how did you come up with that idea?
 
 **Freeman**: _Ok, first things first, it all came down from my passion for reading books, when I was 12y.o I was reading a french science magazine, and then I saw a kid around my age who had won a tech competition by using a technology called Arduino, it got me hooked up in tech and I started searching for stuff related to C++, I first tried it and it was way too difficult for me and I immediately dropped it, after a year, during the Africa code week(which btw is an event which introduces programming to kids) the library which I frequented held an event of it and I joined it, this lit again that little curiosity in programming and some times after, I continued to tackle C++ no matter the difficulty, after something like a year and a half I finally made something substantial with it while being self-taught and learning on my free time after school._
 
-**Tresor**: Woah!! that's was really great, and adventurous, How did you get the courage to start on low-level languages as many self-taught developers are afraid of them
+**Tresor**: Woah!! that's was great, How did you get the courage to start on [low-level programming languages](https://en.wikipedia.org/wiki/Low-level_programming_language) as many self-taught developers are afraid of them.
 
 **Freeman**: _Like I said I wanted to learn this Arduino thing but I later found out it was too expensive for a 14y.o kid(it cost around 24£ which in Burundi francs is around 75000) it did not discourage me to learn C++ as I then had a new goal, making my dream game, I also dropped this idea because the game engine was too heavy(64GB of installation) and too resources consuming(at least 8GB of RAM) and I did have neither of them, later I then discovered algorithms and competitive programming, this currently fuels my love of these languages because sometimes speed matters when programming(especially in some competitive programming challenges). Then I discovered Linux and I was told that OS's are built on lower-level programming languages, it really was interesting and I also want to contribute one day to the Linux kernel._
 
-**Tresor**: Ooh!!, this is really good, you mentioned that you did research when you read about a technology called Arduino, at the time did you have a computer or how did you manage to do a research
+**Tresor**: You mentioned that you did research when you read about a technology called Arduino, at the time did you have a computer or, well... how did you manage to do a research?
 
 **Freeman**: _I still have my little computer which is...well not that good(2gb of RAM and a 2008 processor) at that time I also had it and I used it for learning, I was also very good at googling at that time because I frequently used the internet to search for books, so it was not that hard to quickly make research on Arduino, but at that time I had problems with my English comprehension, so I forced myself to learn everything in English while only understanding about 40~60% of what I was reading._
 
-**Tresor**: Add about asking of a sponsor
-
-**Tresor**: You're fluent in English, how do you learn English or practice it as long as we know most schools here in Burundi focus a lot on French?
+**Tresor**: Snow, you're fluent in English, how do you learn English or practice it as long as we know most schools here in Burundi focus a lot on French?
 
 **Freeman**: _There are mainly 2 reasons why I'm this fluent in English:_
 
@@ -32,15 +34,15 @@ _Ok, my name is Freeman Irabaruta, I'm 16y.o and I'm currently a student at LLT(
 
 -   _The second reason is as I have stated above: because I forced myself to follow tutorials in English while only partially understanding it._
 
-**Tresor**: Ok, Great, thank you snow for that, so it means reading books will help to improve English skills??
+**Tresor**: So, it means reading books will help to improve English skills??
 
-**Freeman**: _Absolutely, especially your vocabulary_
+**Freeman**: _Absolutely, especially your vocabulary._
 
 **Tresor**: Good, let's come again on your programming journey, how many projects did you make so far?
 
-**Freeman**: _Before I got to know what Git and Github were, I had done some projects in Vue.js and plenty in C++, like for example a small blog in Vue which was generated with a JSON config file. In C++ I had made a Kirundi to English translator which used a big dictionary, I had spent some time building which contained many translations(at least 1000), I also made a conjugation program which conjugated Kirundi verbs in past, present, future and 2 other complicated time stances that don't exist in English, and other more interesting projects, but unfortunately, I lost all of them after I accidentally wiped out my Windows partition while installing Linux on my computer(after this I lost my motivation to rewrite these projects again), after I got to know Git and Github I made many projects(i think somewhere between 40-50) which can be found in detail on [my portfolio](https://portfolio-mu-liard.now.sh/) and [my Github account](https://github.com/snow-blade) I made some of them during [google code-in](https://codein.withgoogle.com/archive/) which is a global competition that introduces open-source to pre-university students(13-17 y.o), I miraculously made it to the top 20 with the organization I was working with(fedora project) and it helped me to get confident in my skills in programming_
+**Freeman**: _Before I got to know what Git and Github were, I had done some projects in Vue.js and plenty in C++, like for example a small blog in Vue which was generated with a JSON config file. In C++ I had made a Kirundi to English translator which used a big dictionary, I had spent some time building which contained many translations(at least 1000), I also made a conjugation program which conjugated Kirundi verbs in past, present, future and 2 other complicated time stances that don't exist in English, and other more interesting projects, but unfortunately, I lost all of them after I accidentally wiped out my Windows partition while installing Linux on my computer(after this I lost my motivation to rewrite these projects again), after I got to know Git and Github I made many projects(i think somewhere between 40-50) which can be found in detail on [my portfolio](https://portfolio-mu-liard.now.sh/) and [my Github account](https://github.com/snow-blade) I made some of them during [google code-in](https://codein.withgoogle.com/archive/) which is a global competition that introduces open-source to pre-university students(13-17 y.o), I miraculously made it to the top 20 with the organization I was working with(fedora project) and it helped me to get confident in my skills in programming._
 
-**Tresor**: That's at lot Snow please keep it up, Which one was the most challenging to you except the one you started with I mean the one you think you learned a lot
+**Tresor**: That's at lot Snow, keep it up, which one was the most challenging to you except the one you started with I mean the one you think you learned a lot
 
 **Freeman**: _Ok, I must say I have 2 challenging challenges:_
 
@@ -48,29 +50,59 @@ _Ok, my name is Freeman Irabaruta, I'm 16y.o and I'm currently a student at LLT(
 
 -   _The second is the one I'm currently working on; I'm trying to build a command-line text editor with Rust_
 
--   _I also struggled to understand a dime about Javascript, trust me, when you have an OOP background, Javascript is completely ugly and weird and I remember days where I had a headache after reading a book about JS, but I came later to like it given its imperfections_
+-   _I also struggled to understand a dime about Javascript, trust me, when you have an OOP background, Javascript is completely ugly and weird and I remember days where I had a headache after reading a book about JS, but I came later to like it given its imperfections._
 
 **Tresor**: The project you're building is great can you give us a link to it, if it is open-sourced so that others can learn from it?
 
-**Freeman**: _It's really not ready yet, it can only read and edit files, I don't feel confident enough about it to put it on Github, I will add it when I will add syntax highlight and a better CLI_
+**Freeman**: _It's really not ready yet, it can only read and edit files, I don't feel confident enough about it to put it on Github, I will add it when I will add syntax highlight and a better CLI._
 
-**Tresor**: Ok fine let us know when you open-sourced it
+**Tresor**: Ok fine, let us know when you open-source it.
 
 **Freeman**: _Sure_
 
 **Tresor**: How do you find time to work on your programming projects while you're still in high school?
 
-**Freeman**: _For this year it is easy to work on my programming projects as I'm in math, physics, and IT-related section, and also because our curriculum is very short(and I also love these courses especially maths). I normally study for one hour(more or less) and program for 2 or more hours(it generally depends whether or not we had club activities or I was by the library that day), I try to be very strict with this schedule but sometimes I don't stick with it and I do things randomly, but for past years I saw my grades drop a bit because of this as it was difficult to excel in school and program at the same time, but I had so much to learn in programming..._
+**Freeman**: _For this year it is easy to work on my programming projects as I'm in math, physics, and IT-related section, and also because our curriculum is very short(and I also love these courses especially maths). I normally study for one hour(more or less) and program for 2 or more hours(it generally depends whether or not we had club activities or I was by the library that day), I try to be very strict with this schedule but sometimes I don't stick with it and I do things randomly, but for past years I saw my grades drop a bit because of this as it was difficult to excel in school and program at the same time, but I had so much to learn in programming._
 
 **Tresor**: What is your favorite programming language?
 
-**Freeman**: I hesitate between Rust, C++, and Python
+**Freeman**: _I hesitate between Rust, C++, and Python._
 
 **Tresor**: Do you prefer to use a text editor or an IDE? and which one?
 
-**Freeman**: _I would say text editor(Neovim, Nano , and the Gnome default text editor) as an IDE is very laggy on my system(but I still have sublime which is not very resource consuming)_
+**Freeman**: _I would say text editor(Neovim, Nano , and the Gnome default text editor) as an IDE is very laggy on my system(but I still have sublime which is not very resource consuming)._
 
 **Tresor**: I can't thank you enough for your time Snow, many thanks.
 What advice can you give to other young people or other people who are starting in programming in general?
 
 **Freeman**: _**NEVER GIVE UP,** by that I mean never, don't be discouraged by other people who don't understand what you're doing, don't be discouraged by other's people work, don't let your lack or usability of your computer discourage you(this is actually a very big issue), if you know what you want, one day you will eventually get it if you put in enough efforts, don't expect miracles... Also, don't be afraid to seek help from others_.
+
+**Tresor**: Wooh !!!, The boy is courageous, imagine what he can do, if he has a more powerful computer, please if you have a way to help him with materials as he has a brilliant brain, I'm sure he couldn't let you down, he can do great things.
+
+If you have more questions, please get in touch with Snow on:
+
+<Flex justify="start" align="center" mt={4} mb={4}>
+<Contact
+url="https://twitter.com/tweepcoder"
+mr={2}
+aria-label="Twitter"
+icon="twitter"
+/>
+
+<Contact
+    url="https://github.com/snow-blade"
+    mr={2}
+    aria-label="Github"
+    icon="github"
+/>
+
+<Contact
+    url="mailto:freemanirabaruta@gmail.com"
+    mr={2}
+    aria-label="Gmail"
+    icon="mail"
+/>
+</Flex>
+
+Thank you all, I hope you enjoyed reading this, can't wait to have you on the
+next post.
