@@ -32,7 +32,7 @@ export const Contacts = () => {
             </Tooltip>
 
             <Contact
-                url="https://twitter.com/Muco31073256"
+                url="https://twitter.com/dev_muco"
                 mr={2}
                 aria-label="Twitter"
                 icon="twitter"
