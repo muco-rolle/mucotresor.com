@@ -20,11 +20,6 @@ export const DocumentHead = () => {
             />
             <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
 
-            <meta
-                name="google-site-verification"
-                content="Te66lIxLEh-pkFheryKlLrZQpoVmhxXq256HUTPGyHw"
-            />
-
             {colorMode === 'light' ? (
                 <link rel="stylesheet" href="/assets/nprogress.css" />
             ) : (
