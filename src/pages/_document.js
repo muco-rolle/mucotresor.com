@@ -13,6 +13,11 @@ class MyDocument extends Document {
                         src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
                     />
 
+                    <meta
+                        name="google-site-verification"
+                        content="Te66lIxLEh-pkFheryKlLrZQpoVmhxXq256HUTPGyHw"
+                    />
+
                     <script
                         // eslint-disable-next-line react/no-danger
                         dangerouslySetInnerHTML={{
