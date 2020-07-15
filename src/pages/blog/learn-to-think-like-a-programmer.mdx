@@ -1,0 +1,38 @@
+---
+title: 'Learn to Think Like a Programmer'
+publishedAt: '2020-07-11'
+summary: "Hello again, today is a different topic, I'm starting a series entitled Inspire me, which will include topics to inspire you, and push you to pursue your dream. So today we have a special guest, a talented young software engineer known as..."
+---
+
+If you watched a movie called [The Pursuit of Happyness](https://en.wikipedia.org/wiki/The_Pursuit_of_Happyness) you can remember a scene where Chris Gardner(Will Smith) was in a job interview and said this:
+
+> I'm the type of person, if you ask me a question, and I don't know the answer, I'm gonna tell you that I don't know. But I bet you what. I know how to find the answer, and I will find the answer.
+
+Now you can ask me how does that related to think like a programmer? Yes it is here we have two important things **have a question(problem)** and **find the answer(solution)** I think you can agree with that's what programmers are dealing with everyday, problems are always being thrown at them, and your job is to find the solution to those problems, now the purpose of this article is to learn to find the solution of a problem with a mindset of a programmer.
+
+There are four steps to thinking like a developer or find solution to a problem:
+
+1. Identify the problem you need to solve
+2. Break the problem down into smaller problems
+3. Solve each small problem
+4. Assemble your solutions into the final solution.
+
+Giving you the steps only I don't think it's enough let's take a concrete example and go through all of those 4 steps. I built this blog with [NextJS](https://nextjs.org/) a Static Site Generator and Server Side Rendering framework built on ReactJS. Recently I was tasked to build an API documentation and we realize that soon or later we gonna need to customize the tool I was using to write the documentation
+and then I started to think how I will do that, actually the tool is built on the same principles as the one I'm using to write this article, it is static site generator I got the idea to build a small version of a Static Site Generator by that I will have some understanding of how the tool is working but surely I didn't have any clue of how I can do it. Let's use the steps above and see how we can build something we don't know the solution in first place. I know that it's not an innovation solution but it is a good example to show you how you can tackle any problem and find the answer. Before we can dive into build this application let's first talk about prerequisite you need to follow comfortably. To follow this tutorial I'm expecting you to have basics of Javascript as I'm gonna use **Nodejs**, or if you know another language programming language you can follow along Javascript is not that hard you can understand most of the code we gonna write, or you can implement the fixtures we build here into the language you're comfortable with.
+
+## Identify the problem you need to solve
+
+This is the first step, you need to understand the problem you're solving
+
+> Most hard problems are hard because you don’t understand them
+
+So in our context we already know the problem we want to solve, we want to build a simple static site generator which will helps us to write blog posts in markdown and generate them into html files but depending on the complexity of the application you should spend much time understanding clearly the problem you want to solve, once you do that's a great win.
+
+## Break the problem down into smaller problems
+
+Once we know the problem it's time to break it down into smaller pieces why? because a smaller thing is really easy to reason about other than something which has a lot of abstraction many stuffs so what do we need in first place? as we want to generate the content from a markdown down file to an html file we need
+
+-   To read the content from a markdown down file
+-   Parsing the content we get from that file(because they are different content we want to get them from markdown to html)
+-   Generating content into html
+<!-- I got the idea to built my little version of a static site generator, I want it to be simple enough, just be able to write posts in markdown and have them generate them into html files. -->
