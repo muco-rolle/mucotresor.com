@@ -30,9 +30,68 @@ So in our context we already know the problem we want to solve, we want to build
 
 ## Break the problem down into smaller problems
 
-Once we know the problem it's time to break it down into smaller pieces why? because a smaller thing is really easy to reason about other than something which has a lot of abstraction many stuffs so what do we need in first place? as we want to generate the content from a markdown down file to an html file we need
+Once you know the problem it is time to break it down into smaller problems, this will make the process of solving your problem easier.
 
--   To read the content from a markdown down file
--   Parsing the content we get from that file(because they are different content we want to get them from markdown to html)
--   Generating content into html
+Desmond Tutu once wisely said that
+
+> there is only one way to eat an elephant: a bite at a time.
+
+In our context this means that every problem that seems daunting, overwhelming, and even impossible can be accomplished gradually by taking on just a little at a time.
+
+So let's try to break down our problem into smaller problems, we need to generate html from markdown content, here's the steps we can take to achieve that
+
+-   Get the content from a markdown down file
+-   Convert markdown content to html
+-   Add html content converted from markdown to html files
+
 <!-- I got the idea to built my little version of a static site generator, I want it to be simple enough, just be able to write posts in markdown and have them generate them into html files. -->
+
+Great, we have smaller problems to work on now let's setup our environment. Make sure you have nodejs installed in your machine or go their [official website](https://nodejs.org/en/) and download it, start by creating folder name it whatever you want I'm gonna name it `ssg`
+and I'm using command line interface to create folder and files feel free to do so or use a your graphical user interface
+
+```shell
+mkdir ssg
+```
+
+go into your folder
+
+```shell
+cd ssg
+```
+
+When you install nodejs it comes with a package manager called npm so let's use it to initialize our project and install dependencies we gonna in our project in your project folder run the following command
+
+```shell:ssg
+npm init -y
+```
+
+the command above create a file and name it `package.json` it contains all information related to our project like version, dependencies and more. For now that contains this content
+
+```json:ssg/package.json
+{
+    "name": "ssg",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
+```
+
+create another folder inside called src and inside it create a file and name it main.ts
+
+```shell:ssg
+mkdir src
+```
+
+```shell:ssg
+cd src
+```
+
+```shell:ssg/src
+touch main.ts
+```
