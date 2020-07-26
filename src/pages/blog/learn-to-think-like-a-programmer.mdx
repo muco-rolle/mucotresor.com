@@ -8,37 +8,44 @@ If you watched a movie called [The Pursuit of Happyness](https://en.wikipedia.or
 
 > I'm the type of person, if you ask me a question, and I don't know the answer, I'm gonna tell you that I don't know. But I bet you what. I know how to find the answer, and I will find the answer.
 
-Now you can ask me how does that related to think like a programmer? Yes it is here we have two important things **have a question(problem)** and **find the answer(solution)** I think you can agree with that's what programmers are dealing with everyday, problems are always being thrown at them, and your job is to find the solution to those problems, now the purpose of this article is to learn to find the solution of a problem with a mindset of a programmer.
+Now you can ask me how does that relate to think like a programmer? Yes it does, this is the mindset every professional programmer should have, amateurs programmers pretend to have knowledge they don't possess while professional programmers aren't afraid to admit whey they are wrong or don't know.
 
-There are four steps to thinking like a developer or find solution to a problem:
+In the quote above we have two important things: **have a question(problem)** and **find the answer(solution)**. I'm sure you can agree with me that that's what programmers are dealing with everyday, **to find solution for problems**. In this article we're going to focus on how to find the solution for a problem you don't know in first place, actually there are four steps many professional programmers take to solve a problem:
 
-1. Identify the problem you need to solve
-2. Break the problem down into smaller problems
-3. Solve each small problem
-4. Assemble your solutions into the final solution.
+<!-- It can be easy to bring out an application or a solution of a problem you've already worked on, but what if you don't know the solution? what if you're stuck? how do you get yourself out of that chaos? yeah I know it can be easy to find a tutorial online or someone else's solution, but I don't think that's a the first route to take. Steve Jobs once said:
 
-Giving you the steps only I don't think it's enough let's take a concrete example and go through all of those 4 steps. I built this blog with [NextJS](https://nextjs.org/) a Static Site Generator and Server Side Rendering framework built on ReactJS. Recently I was tasked to build an API documentation and we realize that soon or later we gonna need to customize the tool I was using to write the documentation
-and then I started to think how I will do that, actually the tool is built on the same principles as the one I'm using to write this article, it is static site generator I got the idea to build a small version of a Static Site Generator by that I will have some understanding of how the tool is working but surely I didn't have any clue of how I can do it. Let's use the steps above and see how we can build something we don't know the solution in first place. I know that it's not an innovation solution but it is a good example to show you how you can tackle any problem and find the answer. Before we can dive into build this application let's first talk about prerequisite you need to follow comfortably. To follow this tutorial I'm expecting you to have basics of Javascript as I'm gonna use **Nodejs**, or if you know another language programming language you can follow along Javascript is not that hard you can understand most of the code we gonna write, or you can implement the fixtures we build here into the language you're comfortable with.
+> Everyone in this country should learn to program a computer, because it teaches you to think.
 
-## Identify the problem you need to solve
+When you try to understand the meaning of that quote, it means that there's a way programmers think therefore think about problems, and especially how to find solutions. Now the question is which approach programmers take to think about problems and come up with solutions. -->
 
-This is the first step, you need to understand the problem you're solving
+1. Understand the problem they need to solve.
+2. Break the problem down into smaller problems.
+3. Solve each small problem.
+4. Assemble the solutions into the final solution.
 
-> Most hard problems are hard because you don’t understand them
+Giving you the steps only, I don't think it's enough let's take a concrete example and go through all of those 4 steps, so here's how we gonna do it.
 
-So in our context we already know the problem we want to solve, we want to build a simple static site generator which will helps us to write blog posts in markdown and generate them into html files but depending on the complexity of the application you should spend much time understanding clearly the problem you want to solve, once you do that's a great win.
+Recently I was tasked to write a documentation of an API, and we realize that soon or later we gonna need to customize the tool I was using to write the documentation. I started to think about how I will do that, actually the tool I was using is built on the same principles as the one I built on this blog, it is Static Site Generator, so I got the idea to build a small version of it and then by that I will have some understanding of how the tool is working, but I didn't have any clue of how I can do it. Let's use the steps above and see how we can build something we don't know the solution in first place. I know that it's not an innovative solution but it is a good example to show you how you can tackle any problem you don't know the solution and find it.
+
+Before we dive into building this let's first talk about prerequisite you need to follow comfortably.
+
+Code examples will be written in Javascript on the server you have to know the basics of javascript and nodejs as well or if you have experience with another programming language you can follow along Javascript is not hard you can understand most of the code we gonna write, or you can implement the fixtures we build here into the language you're comfortable with. Let's start with the first step.
+
+## Understand the problem.
+
+Understing the problem will help you to solve it faster actually most problems are hard because you don't understand them, one of the mistakes you can make as a programmer is to rush into writting code without understanding what problem you are trying to solve, I can relate too, writting code is fun for programmers but if you skip this step most of the times you'll find yourself stuck looking at a blank file without knowing what to do next. So please do yourself a favor to spend some time analysing and understanding the problem you have.
+
+So in our context we already know the problem we want to solve, we want to build a simple static site generator which will help us to write blog posts in markdown and generate them into html files so that they could be run in a browser.
 
 ## Break the problem down into smaller problems
 
-Once you know the problem it is time to break it down into smaller problems, this will make the process of solving your problem easier.
-
-Desmond Tutu once wisely said that
+When you know the problem it is easier to know where to start solving it but Desmond Tutu once wisely said that:
 
 > there is only one way to eat an elephant: a bite at a time.
 
-In our context this means that every problem that seems daunting, overwhelming, and even impossible can be accomplished gradually by taking on just a little at a time.
+This means that every problem that seems daunting, overwhelming, and even impossible can be accomplished gradually by taking on just a little at a time. To break large problems into smaller problems requires practice and experience, so don't get frustrated patience will make you better.
 
-So let's try to break down our problem into smaller problems, we need to generate html from markdown content, here's the steps we can take to achieve that
+So let's try to break down our problem into smaller problems, as we need to generate html from markdown content, here's the steps we can take to achieve that:
 
 -   Get the content from a markdown down file
 -   Convert markdown content to html
@@ -46,30 +53,21 @@ So let's try to break down our problem into smaller problems, we need to generat
 
 <!-- I got the idea to built my little version of a static site generator, I want it to be simple enough, just be able to write posts in markdown and have them generate them into html files. -->
 
-Great, we have smaller problems to work on now let's setup our environment. Make sure you have nodejs installed in your machine or go their [official website](https://nodejs.org/en/) and download it, start by creating folder name it whatever you want I'm gonna name it `ssg`
-and I'm using command line interface to create folder and files feel free to do so or use a your graphical user interface
+Great, we have smaller problems to work on now let's setup our environment. Make sure you have nodejs installed in your machine or go on their [official website](https://nodejs.org/en/) and download it,my favorite way to install nodejs is to use [NVM](https://github.com/nvm-sh/nvm).
 
-```shell
-mkdir ssg
-```
+Let's start by creating folder, name it whatever you want, I'm gonna name it `node-ssg`
 
-go into your folder
+When you install nodejs it comes with a package manager called **npm** so let's use it to initialize our project and install dependencies, go in your folder and in your terminal run the following command.
 
-```shell
-cd ssg
-```
-
-When you install nodejs it comes with a package manager called npm so let's use it to initialize our project and install dependencies we gonna in our project in your project folder run the following command
-
-```shell:ssg
+```shell:node-ssg
 npm init -y
 ```
 
-the command above create a file and name it `package.json` it contains all information related to our project like version, dependencies and more. For now that contains this content
+the command above create a file called `package.json` it contains all information related to our project, like the version of the application, dependencies and more. For now it contains the following content.
 
-```json:ssg/package.json
+```json:node-ssg/package.json
 {
-    "name": "ssg",
+    "name": "node-ssg",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -82,16 +80,66 @@ the command above create a file and name it `package.json` it contains all infor
 }
 ```
 
-create another folder inside called src and inside it create a file and name it main.ts
+Inside the current folder create another folder and name it `src` I'm using command line interface feel free to do so or use your graphical user interface.
 
-```shell:ssg
+```shell:node-ssg
 mkdir src
 ```
 
-```shell:ssg
+Go inside src, create a file and name it `main.js`
+
+```shell:node-ssg
 cd src
 ```
 
-```shell:ssg/src
-touch main.ts
+```shell:node-ssg/src
+touch main.js
+```
+
+Open it with your favorite code editor add the following content
+
+```js:node-ssg/src/main.js
+console.log('Hello, World!!!');
+```
+
+In your terminal run the following command
+
+```shell:node-ssg/src
+node main.js
+```
+
+You should see `Hello, world` displayed in your terminal, great we have nodejs running, let's automate the process above when you change something in `main.js` you will have to run again `node main.js` to see the changes let's install a dependency which will detect if there's a changes in our files and run the command above automatically for us.
+
+In your terminal run the following command
+
+```shell:node-ssg
+npm install nodemon --save-dev
+```
+
+Check `package.json` file you can see that we have nodemon installed under _devDependencies_ field, under **scripts** field remove **test** and
+
+```json:node-ssg/package.json
+"scripts": {
+    "start": "nodemon ./src/main.js"
+}
+```
+
+you can now use the script above to start nodejs in your terminal run this command
+
+```shell:node-ssg
+npm run start
+```
+
+Now if you make changes in `node-ssg/src/main.js` you don't have to run node command again
+
+Let's start working on our first problem: **Get the content from a markdown down file**
+
+First we need markdown content work with, in `src` create a file and name it `post-test.md` and copy the content from [this link](https://raw.githubusercontent.com/muco-rolle/mucotresor.com/develop/src/pages/blog/teach-your-self-touch-typing.mdx) until now we have a folder structure look like this
+
+```shell:node-ssg
+├── package-lock.json
+├── package.json
+└── src
+   ├── main.js
+   └── post-test.md
 ```
