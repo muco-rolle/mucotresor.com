@@ -151,12 +151,52 @@ const { join } = require('path');
 const { readFileSync } = require('fs');
 
 const file = join(process.cwd(), 'src/post-test.md');
-const content = readFileSync(file, 'utf8');
-console.log(content);
+const markdownContent = readFileSync(file, 'utf8');
+console.log(markdownContent);
 ```
 
-The fist two lines I'm importing two built in modules the first one is `path` which is a module deals with files and the second in `fs` which is built in modules deals with file system these modules have many functions as for now I need one function I'm just importing what I one function in each, In nodejs many functions whihc deals with tasks that can take long time will come into two version a Synchronous version and an Asynchronous version for now we're using a Synchronous version because we don't gonna suffer from performance issues, for Async version it should be `readFile` only.
+The fist two lines I'm importing two built in modules the first one is `path` which is a module provides utilities for working with file and directory paths, the second in `fs` which is a module provides an API for interacting with the file system.
 
-The next line is for the file we're working with, I like to work with absolute paths instead of relatives paths I have a function called `join` which is taking to parameters, the first parameters is a method on process object `process.cwd()` is giving me the current working directory in absolute path which is `node-ssg` and the second is just the path for my file and are being joined
+<!-- In nodejs many functions which deals with tasks that can take long time will come in two version a Synchronous version and an Asynchronous version for now we're using a Synchronous version because we don't gonna suffer from performance issues, for Async version it should be `readFile` only. -->
 
-next we're using `readFileSync` function which is reading the content from the file a gave it in first parameter and is converting the content in utf8 format is aware of that for the its second parameter finally I just print the content in terminal you can see the content of `post-test.md`.
+The next line is for the file we're working with, I like to work with absolute paths instead of relatives paths, I have `join` function which joins all given path segments together using the platform-specific separator as a delimiter, then normalizes the resulting path, the first parameters is a method on process object `process.cwd()` is giving me the current working directory which is `node-ssg` and the second is just the path for my file which are being joined
+
+next we're using `readFileSync` function which is reading the content from the file I gave it in first parameter and is converting the content in utf8 format is aware of that for the its second parameter finally I just print the content in terminal you can see the content of `post-test.md`.
+
+Ok great now we have the content we can now mark as complete our first problem.
+The next problem is: **Convert markdown content to html**
+
+We now have much down content it's time to convent them into html but you don't have to solve your problems in order you can start to the one which is easy and continously until you find complete all sub problems and assemble them into one big solution for the big problem.
+
+How now can we convert markdown down to html? I don't know it's time to make a reasearch in this situation you start to look for different good solution you can use that integrates well with your workflow, so there's a popular package on npm which is `marked` which help us accomplish our work let install it.
+
+```shell:node-ssg
+npm i marked
+```
+
+Once it finished to be installed bring it into our code and start using it check the code below
+
+```js:node-ssg/src/main.js
+const marked = require('marked');
+
+const htmlContent = marked(markdownContent);
+```
+
+the first line we just imported the library we've just installed and the second line we're using the marked function to convert markdown content and in result it returns html content
+with our previous code we now have this
+
+```js:node-ssg/src/main.js
+const { join } = require('path');
+const { readFileSync } = require('fs');
+const marked = require('marked');
+
+const file = join(process.cwd(), 'src/post-test.md');
+const markdownContent = readFileSync(file, 'utf8');
+
+const htmlContent = marked(markdownContent);
+console.log(htmlContent);
+```
+
+Great!!! the second problem is down let's go next one
+
+### Add html content to html files
