@@ -150,7 +150,7 @@ Let's give our interest to `main.js` open it we gonna start writting the actuall
 const { join } = require('path');
 const { readFileSync } = require('fs');
 
-const file = join(process.cwd(), 'src/post-test.md');
+const markdownFile = join(process.cwd(), 'src/post-test.md');
 const markdownContent = readFileSync(file, 'utf8');
 console.log(markdownContent);
 ```
@@ -190,13 +190,37 @@ const { join } = require('path');
 const { readFileSync } = require('fs');
 const marked = require('marked');
 
-const file = join(process.cwd(), 'src/post-test.md');
+const markdownFile = join(process.cwd(), 'src/post-test.md');
 const markdownContent = readFileSync(file, 'utf8');
 
 const htmlContent = marked(markdownContent);
 console.log(htmlContent);
 ```
 
-Great!!! the second problem is down let's go next one
-
 ### Add html content to html files
+
+We now have html content let's then add them into html file checkout the code below
+
+```js:node-ssg/src/main.js
+const { writeFileSync } = require('fs');
+
+const htmlFile = markdownFile.slice(0, -3) + '.html';
+
+writeFileSync(htmlFile, htmlContent);
+```
+
+Here I'm including `writeFileSync` function which is gonna help us to create the file and add the content to it, and then I took the markdown file and I removed the last 3 characters(**.md**) and replace it with **.html**, and finally we use writeFileSync to create the file and add the content to it. With our previous code we now have this
+
+```js:node-ssg/src/main.js
+const { join } = require('path');
+const { readFileSync, writeFileSync } = require('fs');
+const marked = require('marked');
+
+const markdownFile = join(process.cwd(), 'src/post-test.md');
+
+const markdownContent = readFileSync(file, 'utf8');
+const htmlContent = marked(markdownContent);
+
+const htmlFile = markdownFile.slice(0, -3) + '.html';
+writeFileSync(htmlFile, htmlContent);
+```

@@ -9429,6 +9429,11 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
+typeface-fira-code@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/typeface-fira-code/-/typeface-fira-code-1.1.4.tgz#ef36e81c43af0d01a69c15191da416467055d873"
+  integrity sha512-RInwMBx+jPn42hsPAzu6DWyoReLHximaMix5/brUJGPpthPs1QRH6qCXuUrndnLi1dqV551bb+qepudVygFDMQ==
+
 typeface-inconsolata@^0.0.72:
   version "0.0.72"
   resolved "https://registry.yarnpkg.com/typeface-inconsolata/-/typeface-inconsolata-0.0.72.tgz#6b5c92132c7d3e83f7a17025087d8d717ada63d5"

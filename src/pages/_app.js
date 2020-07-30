@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Router from 'next/router';
 import NProgress from 'nprogress';
 import { MDXProvider } from '@mdx-js/react';
@@ -10,6 +10,7 @@ import { theme } from 'theme';
 import { GlobalStyles, DocumentHead, MDXComponents } from 'components';
 
 import 'typeface-inconsolata';
+import 'typeface-fira-code';
 
 // setting up nprogress
 Router.events.on('routeChangeStart', () => NProgress.start());
@@ -22,7 +23,7 @@ const App = ({ Component, pageProps }) => {
     return (
         <ThemeProvider theme={theme}>
             <MDXProvider components={MDXComponents}>
-                <ColorModeProvider value="light">
+                <ColorModeProvider value={'light'}>
                     <GlobalStyles>
                         <DocumentHead />
                         <DefaultSeo {...SEO} />

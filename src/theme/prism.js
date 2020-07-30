@@ -7,6 +7,7 @@ const prismBaseTheme = css`
         color: ${theme.colors.gray[800]};
         background: none;
         font-family: ${theme.fonts.mono};
+        font-weight: 600;
         font-size: ${theme.fontSizes[2]};
         text-align: left;
         white-space: pre;
@@ -22,6 +23,7 @@ const prismBaseTheme = css`
         -ms-hyphens: none;
         hyphens: none;
         width: 100%;
+        line-height: 1.8;
     }
     /* Code blocks */
     pre[class*='language-'] {
@@ -121,6 +123,7 @@ const prismBaseTheme = css`
     .remark-code-title {
         padding: ${theme.space[2]} ${theme.space[4]};
         font-family: ${theme.fonts.mono};
+        font-weight: 900;
         background: ${theme.colors.gray[200]};
         color: ${theme.colors.gray[800]};
         border: 1px solid ${theme.colors.gray[200]};

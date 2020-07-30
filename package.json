@@ -64,6 +64,7 @@
         "remark-capitalize": "1.1.0",
         "remark-code-titles": "0.1.1",
         "remark-slug": "6.0.0",
+        "typeface-fira-code": "^1.1.4",
         "typeface-inconsolata": "^0.0.72",
         "unsplash-js": "6.0.0",
         "utterances-react": "^0.1.3",
