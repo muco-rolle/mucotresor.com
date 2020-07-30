@@ -23,7 +23,7 @@ const prismBaseTheme = css`
         -ms-hyphens: none;
         hyphens: none;
         width: 100%;
-        line-height: 1.8;
+        line-height: 2;
     }
     /* Code blocks */
     pre[class*='language-'] {
