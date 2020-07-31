@@ -2,6 +2,13 @@ import { css } from '@emotion/core';
 import { theme } from '@chakra-ui/core';
 
 const prismBaseTheme = css`
+    code[class*='css-'] {
+        padding: ${theme.space[0]} ${theme.space[1]};
+        font-family: ${theme.fonts.mono};
+        background: ${theme.colors.gray[200]};
+        color: ${theme.colors.gray[800]};
+        border: 1px solid ${theme.colors.gray[300]};
+    }
     code[class*='language-'],
     pre[class*='language-'] {
         color: ${theme.colors.gray[800]};
@@ -229,6 +236,11 @@ export const prismDarkTheme = css`
         color: rgb(178, 204, 214);
     }
 
+    code[class*='css-'] {
+        background: ${theme.colors.gray[700]};
+        color: ${theme.colors.gray[100]};
+        border: 1px solid ${theme.colors.gray[900]};
+    }
     code[class*='language-'],
     pre[class*='language-'] {
         color: ${theme.colors.gray[50]};
