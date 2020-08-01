@@ -1,5 +1,7 @@
-import React, { useEffect } from 'react';
-import Router from 'next/router';
+import React from 'react';
+import Router, { useRouter } from 'next/router';
+import { PageTransition } from 'next-page-transitions';
+
 import NProgress from 'nprogress';
 import { MDXProvider } from '@mdx-js/react';
 import { ThemeProvider, ColorModeProvider } from '@chakra-ui/core';
@@ -20,6 +22,8 @@ Router.events.on('routeChangeComplete', () => NProgress.done());
 Router.events.on('routeChangeError', () => NProgress.done());
 
 const App = ({ Component, pageProps }) => {
+    const { route } = useRouter();
+
     return (
         <ThemeProvider theme={theme}>
             <MDXProvider components={MDXComponents}>
@@ -27,7 +31,9 @@ const App = ({ Component, pageProps }) => {
                     <GlobalStyles>
                         <DocumentHead />
                         <DefaultSeo {...SEO} />
-                        <Component {...pageProps} />
+                        <PageTransition timeout={300} classNames="transition">
+                            <Component {...pageProps} key={route} />
+                        </PageTransition>
                     </GlobalStyles>
                 </ColorModeProvider>
             </MDXProvider>

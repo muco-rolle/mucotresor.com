@@ -52,8 +52,8 @@ const TData = (props) => (
 const CustomLink = (props) => {
     const { colorMode } = useColorMode();
     const color = {
-        light: 'hsl(208, 99%, 44%)',
-        dark: 'hsl(208, 95%, 68%)'
+        light: 'hsl(146, 48%, 42%)',
+        dark: 'hsl(146, 48%, 66%)'
     };
 
     const href = props.href;
@@ -63,19 +63,21 @@ const CustomLink = (props) => {
     if (isInternalLink) {
         return (
             <NextLink href={href} passHref>
-                <Link color={color[colorMode]} {...props} />
+                <Link color={color[colorMode]} {...props} fontWeight="900" />
             </NextLink>
         );
     }
 
-    return <Link color={color[colorMode]} isExternal {...props} />;
+    return (
+        <Link color={color[colorMode]} isExternal {...props} fontWeight="900" />
+    );
 };
 
 const Quote = (props) => {
     const { colorMode } = useColorMode();
     const bgColor = {
-        light: 'blue.50',
-        dark: 'blue.900'
+        light: 'green.50',
+        dark: 'green.900'
     };
 
     return (
@@ -84,7 +86,7 @@ const Quote = (props) => {
             w="98%"
             bg={bgColor[colorMode]}
             variant="left-accent"
-            status="info"
+            status="success"
             css={{
                 '> *:first-of-type': {
                     marginTop: 0,
@@ -169,7 +171,7 @@ export const MDXComponents = {
     th: THead,
     td: TData,
     a: CustomLink,
-    p: (props) => <Text as="p" mt={4} lineHeight="tall" {...props} />,
+    p: (props) => <Text as="p" mt={2} lineHeight="tall" {...props} />,
     ul: (props) => <Box as="ul" pt={2} pl={4} ml={2} {...props} />,
     ol: (props) => <Box as="ol" pt={2} pl={4} ml={2} {...props} />,
     li: (props) => <Box as="li" pb={1} {...props} />,
