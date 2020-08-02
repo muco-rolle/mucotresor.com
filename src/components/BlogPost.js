@@ -18,7 +18,7 @@ export const BlogPost = (frontMatter) => {
         <NextLink href={`blog/${slug}`} passHref>
             <Link
                 w="100%"
-                _hover={{ textDecoration: 'none' }}
+                _hover={{ textDecoration: 'none', color: 'hsl(146, 48%, 42%)' }}
                 _focus={{ border: 'none' }}
             >
                 <Box mb={8} display="block" width="100%">
@@ -32,7 +32,9 @@ export const BlogPost = (frontMatter) => {
                             {title}
                         </Heading>
                     </Flex>
-                    <Text color={secondaryTextColor[colorMode]}>{summary}</Text>
+                    <Text color={secondaryTextColor[colorMode]} fontSize={16}>
+                        {summary}
+                    </Text>
                 </Box>
             </Link>
         </NextLink>

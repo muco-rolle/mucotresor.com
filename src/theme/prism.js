@@ -2,11 +2,19 @@ import { css } from '@emotion/core';
 import { theme } from '@chakra-ui/core';
 
 const prismBaseTheme = css`
+    code[class*='css-'] {
+        padding: ${theme.space[0]} ${theme.space[1]};
+        font-family: ${theme.fonts.mono};
+        background: ${theme.colors.gray[200]};
+        color: ${theme.colors.gray[800]};
+        border: 1px solid ${theme.colors.gray[300]};
+    }
     code[class*='language-'],
     pre[class*='language-'] {
         color: ${theme.colors.gray[800]};
         background: none;
         font-family: ${theme.fonts.mono};
+        font-weight: 600;
         font-size: ${theme.fontSizes[2]};
         text-align: left;
         white-space: pre;
@@ -22,6 +30,7 @@ const prismBaseTheme = css`
         -ms-hyphens: none;
         hyphens: none;
         width: 100%;
+        line-height: 2;
     }
     /* Code blocks */
     pre[class*='language-'] {
@@ -114,13 +123,14 @@ const prismBaseTheme = css`
         padding-left: ${theme.space[4]};
         padding-right: ${theme.space[4]};
         background-color: ${theme.colors.gray[200]};
-        box-shadow: inset 3px 0px 0 0px ${theme.colors.blue[600]};
+        box-shadow: inset 3px 0px 0 0px ${theme.colors.green[600]};
         min-width: fit-content;
     }
 
     .remark-code-title {
         padding: ${theme.space[2]} ${theme.space[4]};
         font-family: ${theme.fonts.mono};
+        font-weight: 900;
         background: ${theme.colors.gray[200]};
         color: ${theme.colors.gray[800]};
         border: 1px solid ${theme.colors.gray[200]};
@@ -154,7 +164,7 @@ export const prismLightTheme = css`
     }
 
     .mdx-marker {
-        background-color: hsla(204, 45%, 96%, 1);
+        background-color: hsla(204, 45%, 95%, 1);
     }
 `;
 
@@ -226,6 +236,11 @@ export const prismDarkTheme = css`
         color: rgb(178, 204, 214);
     }
 
+    code[class*='css-'] {
+        background: ${theme.colors.gray[700]};
+        color: ${theme.colors.gray[100]};
+        border: 1px solid ${theme.colors.gray[900]};
+    }
     code[class*='language-'],
     pre[class*='language-'] {
         color: ${theme.colors.gray[50]};

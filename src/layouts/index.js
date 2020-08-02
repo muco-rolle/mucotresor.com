@@ -6,10 +6,12 @@ import {
     Text,
     Flex,
     Stack,
-    Avatar
+    Avatar,
+    Box
 } from '@chakra-ui/core';
 
-import { BlogSeo, Container, Comments, Utterances } from 'components';
+import { BlogSeo, Container } from 'components';
+
 import { getSlug } from 'utils';
 
 const Layout = (frontMatter) => {
@@ -92,7 +94,7 @@ const Layout = (frontMatter) => {
                     {children}
 
                     {/* <Comments /> */}
-                    {/* <Utterances repo="muco-rolle/mucotresor.com" /> */}
+                    {/* <Utterances /> */}
                 </Stack>
             </Container>
         );
