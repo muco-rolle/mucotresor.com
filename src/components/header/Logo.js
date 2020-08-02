@@ -9,23 +9,31 @@ const StyledLogo = styled.div`
         align-items: center;
 
         .circle {
-            border: 3px solid
+            border: 5px solid
                 ${({ colorMode }) =>
-                    colorMode === 'light' ? 'black' : 'white'};
+                    colorMode === 'light'
+                        ? 'hsl(146, 48%, 42%)'
+                        : 'hsl(146, 48%, 42%)'};
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 30px;
-            height: 30px;
+            width: 45px;
+            height: 45px;
             border-radius: 30px;
             font-weight: 900;
             font-size: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+
+            background-color: black;
+            color: hsl(146, 48%, 80%);
+            .letter {
+            }
         }
 
         .text {
             font-weight: 900;
             font-size: 18px;
-            margin-left: 5px;
+            margin-left: 8px;
         }
     }
 `;
@@ -35,10 +43,15 @@ export const Logo = () => {
 
     return (
         <StyledLogo colorMode={colorMode}>
-            <Link href="/">
+            <Link
+                href="/"
+                _active={{ border: "5px solid 'hsl(146, 48%, 42%)" }}
+            >
                 <a>
-                    <span className="circle">T</span>{' '}
-                    <span className="text">Trésor</span>
+                    <span className="circle">
+                        <span className="letter">T</span>
+                    </span>{' '}
+                    {/* <span className="text">Trésor</span> */}
                 </a>
             </Link>
         </StyledLogo>

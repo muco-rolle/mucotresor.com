@@ -1,29 +1,23 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 
-const src = 'https://utteranc.es/client.js';
-const branch = 'master';
-
-export const Utterances = ({ repo }) => {
-    const rootElm = React.createRef();
+export const Utterances = () => {
+    const commentElement = useRef();
 
     useEffect(() => {
-        const utterances = document.createElement('script');
-        const utterancesConfig = {
-            src,
-            repo,
-            branch,
-            theme: 'github-light',
-            label: 'comment',
-            async: true,
-            'issue-term': 'pathname',
-            crossorigin: 'anonymous'
-        };
+        const utteranceScript = document.createElement('script');
 
-        Object.keys(utterancesConfig).forEach((configKey) => {
-            utterances.setAttribute(configKey, utterancesConfig[configKey]);
-        });
-        rootElm.current.appendChild(utterances);
+        // utteranceScript.onload = () => this.setState({ status: 'success' });
+        // utteranceScript.onerror = () => this.setState({ status: 'failed' });
+
+        utteranceScript.setAttribute('src', 'https://utteranc.es/client.js');
+        utteranceScript.setAttribute('repo', 'muco-rolle/mucotresor.com');
+        utteranceScript.setAttribute('issue-term', 'pathname');
+        utteranceScript.setAttribute('branch', 'develop');
+        utteranceScript.setAttribute('theme', 'github-light');
+        utteranceScript.setAttribute('crossorigin', 'anonymous');
+
+        commentElement.current.appendChild(utteranceScript);
     }, []);
 
-    return <div className="utterences" ref={rootElm} />;
+    return <div ref={commentElement} />;
 };

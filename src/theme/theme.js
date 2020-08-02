@@ -5,8 +5,9 @@ export const theme = {
     ...chakraTheme,
     fonts: {
         ...chakraTheme.fonts,
-        heading: 'Inconsolata',
-        body: `Inconsolata, -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"`
+        heading: `'HK Grotesk', Inconsolata, sans-serif`,
+        body: `HK Grotesk, "Inconsolata",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"`,
+        mono: `'Fira Code', Inconsolata`
     },
     fontWeights: {
         normal: 400,

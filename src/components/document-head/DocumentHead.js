@@ -11,8 +11,11 @@ export const DocumentHead = () => {
                 content="width=device-width, initial-scale=1.0"
             />
             <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+            <link
+                rel="stylesheet"
+                href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/hk-grotesk.min.css"
+            />
 
-            <link rel="stylesheet" href="/assets/nprogress.css" />
             <meta charSet="UTF-8" />
             <meta
                 name="viewport"
