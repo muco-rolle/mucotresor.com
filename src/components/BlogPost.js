@@ -32,7 +32,9 @@ export const BlogPost = (frontMatter) => {
                             {title}
                         </Heading>
                     </Flex>
-                    <Text color={secondaryTextColor[colorMode]}>{summary}</Text>
+                    <Text color={secondaryTextColor[colorMode]} fontSize={16}>
+                        {summary}
+                    </Text>
                 </Box>
             </Link>
         </NextLink>

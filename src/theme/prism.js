@@ -123,7 +123,7 @@ const prismBaseTheme = css`
         padding-left: ${theme.space[4]};
         padding-right: ${theme.space[4]};
         background-color: ${theme.colors.gray[200]};
-        box-shadow: inset 3px 0px 0 0px ${theme.colors.blue[600]};
+        box-shadow: inset 3px 0px 0 0px ${theme.colors.green[600]};
         min-width: fit-content;
     }
 
@@ -164,7 +164,7 @@ export const prismLightTheme = css`
     }
 
     .mdx-marker {
-        background-color: hsla(204, 45%, 96%, 1);
+        background-color: hsla(204, 45%, 95%, 1);
     }
 `;
 

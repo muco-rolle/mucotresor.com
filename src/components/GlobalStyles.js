@@ -91,6 +91,10 @@ export const GlobalStyles = (props) => {
                         font-variant-ligatures: additional-ligatures;
                     }
 
+                    body {
+                        font-size: 17px;
+                    }
+
                     #__next {
                         display: flex;
                         flex-direction: column;

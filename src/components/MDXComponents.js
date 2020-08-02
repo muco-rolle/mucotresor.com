@@ -69,7 +69,13 @@ const CustomLink = (props) => {
     }
 
     return (
-        <Link color={color[colorMode]} isExternal {...props} fontWeight="900" />
+        <Link
+            color={color[colorMode]}
+            isExternal
+            {...props}
+            fontWeight="900"
+            _active={{ color: 'hsl(146, 48%, 42%)' }}
+        />
     );
 };
 
@@ -117,7 +123,7 @@ const DocsHeading = (props) => (
         }}
         {...props}
         mb="1em"
-        mt="2em"
+        mt="1em"
     >
         <Box pointerEvents="auto">
             {props.children}
@@ -125,11 +131,12 @@ const DocsHeading = (props) => (
                 <PseudoBox
                     aria-label="anchor"
                     as="a"
-                    color="blue.500"
+                    color="green.500"
                     fontWeight="normal"
                     outline="none"
                     _focus={{
                         opacity: 1,
+                        color: 'green.500',
                         boxShadow: 'outline'
                     }}
                     opacity="0"

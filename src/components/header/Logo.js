@@ -17,8 +17,8 @@ const StyledLogo = styled.div`
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 50px;
-            height: 50px;
+            width: 45px;
+            height: 45px;
             border-radius: 30px;
             font-weight: 900;
             font-size: 10px;
@@ -51,7 +51,7 @@ export const Logo = () => {
                     <span className="circle">
                         <span className="letter">T</span>
                     </span>{' '}
-                    <span className="text">Tresor</span>
+                    {/* <span className="text">Trésor</span> */}
                 </a>
             </Link>
         </StyledLogo>
