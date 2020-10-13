@@ -14,6 +14,7 @@ import {
 import { jsx } from '@emotion/core';
 import NextLink from 'next/link';
 
+// #0F9D58
 const Table = (props) => (
     <Box as="table" textAlign="left" mt="32px" width="full" {...props} />
 );
@@ -184,5 +185,3 @@ export const MDXComponents = {
     li: (props) => <Box as="li" pb={1} {...props} />,
     blockquote: Quote
 };
-
-export default MDXComponents;

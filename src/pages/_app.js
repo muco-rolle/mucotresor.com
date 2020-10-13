@@ -1,18 +1,14 @@
 import React from 'react';
 import Router, { useRouter } from 'next/router';
-import { PageTransition } from 'next-page-transitions';
-
-import NProgress from 'nprogress';
-import { MDXProvider } from '@mdx-js/react';
 import { ThemeProvider, ColorModeProvider } from '@chakra-ui/core';
-
+import { MDXProvider } from '@mdx-js/react';
 import { DefaultSeo } from 'next-seo';
+import { PageTransition } from 'next-page-transitions';
+import NProgress from 'nprogress';
+
 import { SEO } from 'next-seo.config';
 import { theme } from 'theme';
 import { GlobalStyles, DocumentHead, MDXComponents } from 'components';
-
-import 'typeface-inconsolata';
-import 'typeface-fira-code';
 
 // setting up nprogress
 Router.events.on('routeChangeStart', () => NProgress.start());

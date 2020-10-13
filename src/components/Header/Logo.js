@@ -43,10 +43,7 @@ export const Logo = () => {
 
     return (
         <StyledLogo colorMode={colorMode}>
-            <Link
-                href="/"
-                _active={{ border: "5px solid 'hsl(146, 48%, 42%)" }}
-            >
+            <Link href="/">
                 <a>
                     <span className="circle">
                         <span className="letter">T</span>

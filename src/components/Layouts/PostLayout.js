@@ -13,7 +13,7 @@ import { BlogSeo, Container } from 'components';
 
 import { getSlug } from 'utils';
 
-const Layout = (frontMatter) => {
+export const Layout = (frontMatter) => {
     const slug = getSlug(frontMatter.__resourcePath);
 
     return ({ children }) => {
@@ -99,5 +99,3 @@ const Layout = (frontMatter) => {
         );
     };
 };
-
-export default Layout;
