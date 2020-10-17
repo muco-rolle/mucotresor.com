@@ -1,1 +1,1 @@
-export * from './get-slug';
+export * from './mdx';
