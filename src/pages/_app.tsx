@@ -7,9 +7,9 @@ import { PageTransition } from '@components';
 function App({ Component, pageProps }: AppProps) {
     return (
         <ChakraProvider theme={theme} resetCSS>
-            <PageTransition>
-                <Component {...pageProps} />
-            </PageTransition>
+            {/* <PageTransition> */}
+            <Component {...pageProps} />
+            {/* </PageTransition> */}
         </ChakraProvider>
     );
 }
