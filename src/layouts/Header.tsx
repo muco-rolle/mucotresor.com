@@ -69,6 +69,10 @@ export const Header = () => {
                         aria-label="theme-switcher"
                         icon={<SunIcon />}
                         size="md"
+                        borderRadius="100px"
+                        bg="none"
+                        _hover={{ bg: 'green.100' }}
+                        _active={{ bg: 'green.200' }}
                     />
                 </HStack>
             </Box>
@@ -77,7 +81,12 @@ export const Header = () => {
 };
 
 const NavLink = ({ url, children }: NavLinkProps) => (
-    <Button bg="none" fontWeight="normal">
+    <Button
+        bg="none"
+        fontWeight="normal"
+        _hover={{ bg: 'green.100', color: 'green.700' }}
+        _active={{ bg: 'green.200' }}
+    >
         <NextLink href={url}>
             <Link _hover={{ textDecor: 'none' }}>{children}</Link>
         </NextLink>

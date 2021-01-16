@@ -9,7 +9,7 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
     return (
         <Box>
             <Header />
-            <Box w="600px" maxW="90%" m="0 auto">
+            <Box w="700px" maxW="90%" m="0 auto">
                 {children}
             </Box>
         </Box>

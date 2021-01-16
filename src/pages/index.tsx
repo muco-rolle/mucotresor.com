@@ -12,7 +12,10 @@ import { MainLayout } from '@layouts';
 const HomePage = () => {
     return (
         <MainLayout>
-            {/* Intro Section */}
+            {/**********************************************************
+             *  HOME PAGE
+             *  Intro Section
+             * ********************************************************* */}
             <Box>
                 <VStack align="flex-start" spacing={5}>
                     <Heading as="h1" size="2xl" fontWeight="900">
@@ -20,12 +23,11 @@ const HomePage = () => {
                     </Heading>
                     <Text>
                         I'm a Fullstack web developer, I build things with code,
-                        mainly with: <br />{' '}
-                        <Box as="strong">Javascript/Typescript</Box> ,
+                        mainly with{' '}
+                        <Box as="strong">: Javascript/Typescript</Box>,{' '}
                         <Box as="strong">ReactJS</Box>,{' '}
                         <Box as="strong">NodeJS</Box>, and{' '}
-                        <Box as="strong">GraphQL</Box>. I'm currently working as
-                        a Freelance developer
+                        <Box as="strong">GraphQL</Box>.
                     </Text>
 
                     <Box
@@ -83,6 +85,10 @@ const HomePage = () => {
                 </VStack>
             </Box>
 
+            {/**********************************************************
+             *  HOME PAGE
+             *  Testimonials and Trusted by section
+             * ********************************************************* */}
             {/* Trusted by section */}
             <Box mt={20}>
                 <Heading as="h2" size="xl" fontWeight="900">
