@@ -3,3 +3,5 @@ export enum Routes {
     blog = '/blog',
     aboutMe = '/about',
 }
+
+export const ROOT_PATH = process.cwd() + '/src';

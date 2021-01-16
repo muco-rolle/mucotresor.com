@@ -1,5 +1,6 @@
 import {
     Box,
+    BoxProps,
     Button,
     Heading,
     HStack,
@@ -7,9 +8,14 @@ import {
     Text,
     VStack,
 } from '@chakra-ui/react';
+import NextLink from 'next/link';
 import { MainLayout } from '@layouts';
+import { Posts } from '@types';
+import { getPosts } from '@utils';
+import styled from '@emotion/styled';
 
-const HomePage = () => {
+type HomePageProps = { posts: Posts };
+const HomePage = ({ posts }: HomePageProps) => {
     return (
         <MainLayout>
             {/**********************************************************
@@ -42,11 +48,16 @@ const HomePage = () => {
                                 <Icon
                                     stroke="currentColor"
                                     fill="none"
-                                    stroke-width="2"
+                                    strokeWidth="2"
                                     viewBox="0 0 24 24"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="css-1xzrexu"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    className="css-1xzrexu"
+                                    style={{
+                                        color: '#276648',
+                                        fontSize: '20px',
+                                        fontWeight: 'bold',
+                                    }}
                                     height="1em"
                                     width="1em"
                                     xmlns="http://www.w3.org/2000/svg"
@@ -87,16 +98,87 @@ const HomePage = () => {
 
             {/**********************************************************
              *  HOME PAGE
-             *  Testimonials and Trusted by section
+             *  Latest posts sections
              * ********************************************************* */}
-            {/* Trusted by section */}
             <Box mt={20}>
+                <VStack spacing={8} align="stretch">
+                    <Heading as="h2" size="xl" fontWeight="900">
+                        Latest posts
+                    </Heading>
+
+                    <Box>
+                        <VStack spacing={8} align="flex-start">
+                            {posts
+                                ?.slice(0, 3)
+                                .sort()
+                                .map(({ title, slug, summary }) => (
+                                    <NextLink href={`/blog/${slug}`} key={slug}>
+                                        <a>
+                                            <Post>
+                                                <VStack
+                                                    align="flex-start"
+                                                    spacing={3}
+                                                >
+                                                    <Heading
+                                                        pos="relative"
+                                                        as="h3"
+                                                        size="md"
+                                                    >
+                                                        {title}
+                                                    </Heading>
+                                                    <Text>{summary}</Text>
+                                                </VStack>
+                                            </Post>
+                                        </a>
+                                    </NextLink>
+                                ))}
+                            <Button colorScheme="green">Read All posts</Button>
+                        </VStack>
+                    </Box>
+                </VStack>
+            </Box>
+
+            {/**********************************************************
+             *  HOME PAGE
+             *  Latest posts sections
+             * ********************************************************* */}
+            <Box my={20}>
                 <Heading as="h2" size="xl" fontWeight="900">
-                    Trusted by
+                    Trusted by:
                 </Heading>
             </Box>
         </MainLayout>
     );
 };
+
+const Post = styled.a`
+    h3::after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        width: 50px;
+        transform: translateX(-48px);
+        opacity: 0;
+        transition: all 0.3s ease;
+        border-bottom: 5px solid #38a169;
+
+        bottom: 0;
+        left: 0;
+        top: 24px;
+    }
+
+    &:hover {
+        h3::after {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+`;
+
+export async function getStaticProps() {
+    const posts = await getPosts('blog');
+
+    return { props: { posts } };
+}
 
 export default HomePage;
