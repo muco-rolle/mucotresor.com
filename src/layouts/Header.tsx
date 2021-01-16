@@ -21,7 +21,7 @@ export const Header = () => {
         <Flex
             as="header"
             justifyContent="space-between"
-            width="1024px"
+            width="1444px"
             maxW="100%"
             m="0 auto"
             align="center"
