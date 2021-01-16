@@ -20,13 +20,14 @@ export const Header = () => {
     return (
         <Flex
             as="header"
+            position="sticky"
             justifyContent="space-between"
-            width="1444px"
+            width="1024px"
             maxW="100%"
             m="0 auto"
+            mb={8}
             align="center"
             p={4}
-            position="sticky"
             top="0"
             zIndex="10"
             style={{ backdropFilter: `saturate(180%) blur(20px)` }}

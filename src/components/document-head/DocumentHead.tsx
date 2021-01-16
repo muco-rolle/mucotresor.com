@@ -15,8 +15,8 @@ export const DocumentHead = ({ title }: DocumentHeadProps) => {
             <meta name="theme-color" content="#3182ce" />
 
             <link
-                rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/plus-jakarta-text.min.css"
+                rel="preload"
+                href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/hk-grotesk.min.css"
             />
         </NextHead>
     );
