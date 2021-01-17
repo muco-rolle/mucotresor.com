@@ -13,13 +13,15 @@ import {
 import { MainLayout } from '@layouts';
 import { Posts } from '@types';
 import { getPosts } from '@utils';
-import React from 'react';
+import React, { useState } from 'react';
 import { Search2Icon } from '@chakra-ui/icons';
 
 type BlogPageProps = {
     posts: Posts;
 };
 const BlogPage = ({ posts }: BlogPageProps) => {
+    const [searchValue, setSearchValue] = useState('');
+
     return (
         <MainLayout>
             <VStack spacing={8} align="stretch">
@@ -33,13 +35,14 @@ const BlogPage = ({ posts }: BlogPageProps) => {
                     <InputGroup my={4} mr={4} w="100%">
                         <Input
                             aria-label="Search articles"
-                            // onChange={(e) => setSearchValue(e.target.value)}
+                            onChange={(e) => setSearchValue(e.target.value)}
                             placeholder="Search articles"
                             _focus={{ borderColor: 'green.500' }}
+                            _focusWithin={{ borderColor: 'green.500' }}
                         />
                         <InputRightElement>
                             <Icon
-                                icon={<Search2Icon />}
+                                children={<Search2Icon />}
                                 name="search"
                                 color="gray.300"
                             />
@@ -53,25 +56,36 @@ const BlogPage = ({ posts }: BlogPageProps) => {
                             All posts
                         </Heading>
 
-                        {posts?.sort().map(({ title, slug, summary }) => (
-                            <NextLink href={`/blog/${slug}`} key={slug}>
-                                <a>
-                                    <VStack align="flex-start" spacing={3}>
-                                        <Heading
-                                            pos="relative"
-                                            as="h3"
-                                            size="md"
-                                            _hover={{
-                                                color: 'green.500',
-                                            }}
-                                        >
-                                            {title}
-                                        </Heading>
-                                        <Text>{summary}</Text>
-                                    </VStack>
-                                </a>
-                            </NextLink>
-                        ))}
+                        {posts
+                            ?.sort(
+                                (prevPost, nextPost) =>
+                                    Number(new Date(nextPost.publishedAt)) -
+                                    Number(new Date(prevPost.publishedAt))
+                            )
+                            .filter((frontMatter) =>
+                                frontMatter.title
+                                    .toLowerCase()
+                                    .includes(searchValue.toLowerCase())
+                            )
+                            .map(({ title, slug, summary }) => (
+                                <NextLink href={`/blog/${slug}`} key={slug}>
+                                    <a>
+                                        <VStack align="flex-start" spacing={3}>
+                                            <Heading
+                                                pos="relative"
+                                                as="h3"
+                                                size="md"
+                                                _hover={{
+                                                    color: 'green.500',
+                                                }}
+                                            >
+                                                {title}
+                                            </Heading>
+                                            <Text>{summary}</Text>
+                                        </VStack>
+                                    </a>
+                                </NextLink>
+                            ))}
                     </VStack>
                 </Box>
             </VStack>
