@@ -110,7 +110,11 @@ const HomePage = ({ posts }: HomePageProps) => {
                         <VStack spacing={8} align="flex-start">
                             {posts
                                 ?.slice(0, 3)
-                                .sort()
+                                .sort(
+                                    (prevPost, nextPost) =>
+                                        Number(new Date(nextPost.publishedAt)) -
+                                        Number(new Date(prevPost.publishedAt))
+                                )
                                 .map(({ title, slug, summary }) => (
                                     <NextLink href={`/blog/${slug}`} key={slug}>
                                         <a>
