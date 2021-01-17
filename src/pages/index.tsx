@@ -114,21 +114,22 @@ const HomePage = ({ posts }: HomePageProps) => {
                                 .map(({ title, slug, summary }) => (
                                     <NextLink href={`/blog/${slug}`} key={slug}>
                                         <a>
-                                            <Post>
-                                                <VStack
-                                                    align="flex-start"
-                                                    spacing={3}
+                                            <VStack
+                                                align="flex-start"
+                                                spacing={3}
+                                            >
+                                                <Heading
+                                                    pos="relative"
+                                                    as="h3"
+                                                    size="md"
+                                                    _hover={{
+                                                        color: 'green.500',
+                                                    }}
                                                 >
-                                                    <Heading
-                                                        pos="relative"
-                                                        as="h3"
-                                                        size="md"
-                                                    >
-                                                        {title}
-                                                    </Heading>
-                                                    <Text>{summary}</Text>
-                                                </VStack>
-                                            </Post>
+                                                    {title}
+                                                </Heading>
+                                                <Text>{summary}</Text>
+                                            </VStack>
                                         </a>
                                     </NextLink>
                                 ))}
@@ -151,32 +152,8 @@ const HomePage = ({ posts }: HomePageProps) => {
     );
 };
 
-const Post = styled.a`
-    h3::after {
-        content: '';
-        position: absolute;
-        display: inline-block;
-        width: 50px;
-        transform: translateX(-48px);
-        opacity: 0;
-        transition: all 0.3s ease;
-        border-bottom: 5px solid #38a169;
-
-        bottom: 0;
-        left: 0;
-        top: 24px;
-    }
-
-    &:hover {
-        h3::after {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-`;
-
 export async function getStaticProps() {
-    const posts = await getPosts('blog');
+    const posts = await getPosts();
 
     return { props: { posts } };
 }

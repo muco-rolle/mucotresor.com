@@ -1,18 +1,20 @@
-import fs from 'fs';
+import fs, { readdirSync } from 'fs';
 import matter from 'gray-matter';
 import mdxPrism from 'mdx-prism';
 import { join } from 'path';
 import readingTime from 'reading-time';
 import renderToString from 'next-mdx-remote/render-to-string';
-import { ROOT_PATH } from '@config';
+import { DATA_PATH } from '@config';
 import { MDXComponents } from '@components';
 
-export const getPosts = async (type: string) => {
-    const posts = fs.readdirSync(join(ROOT_PATH, 'data', type));
+export const postFilePaths = readdirSync(
+    join(DATA_PATH, 'blog')
+).filter((path: string) => /\.mdx?$/.test(path));
 
-    return posts.reduce((allPosts, postSlug) => {
+export const getPosts = async () => {
+    return postFilePaths.reduce((postFilePaths, postFilePath) => {
         const source = fs.readFileSync(
-            join(ROOT_PATH, 'data', type, postSlug),
+            join(DATA_PATH, 'blog', postFilePath),
             'utf8'
         );
         const { data } = matter(source);
@@ -20,19 +22,21 @@ export const getPosts = async (type: string) => {
         return [
             {
                 ...data,
-                slug: postSlug.replace('.mdx', ''),
+                slug: postFilePath.replace('.mdx', ''),
             },
-            ...allPosts,
+            ...postFilePaths,
         ];
     }, []);
 };
 
-export async function getPost(type: string, slug: string) {
-    const source = slug
-        ? fs.readFileSync(join(ROOT_PATH, 'data', type, `${slug}.mdx`), 'utf8')
-        : fs.readFileSync(join(ROOT_PATH, 'data', `${type}.mdx`), 'utf8');
+export async function getPost(slug: string) {
+    const source = fs.readFileSync(
+        join(DATA_PATH, 'blog', `${slug}.mdx`),
+        'utf8'
+    );
 
     const { data, content } = matter(source);
+
     const mdxSource = await renderToString(content, {
         components: MDXComponents,
         mdxOptions: {
@@ -54,8 +58,4 @@ export async function getPost(type: string, slug: string) {
             ...data,
         },
     };
-}
-
-export async function getFiles(type: string) {
-    return fs.readdirSync(join(ROOT_PATH, 'data', type));
 }

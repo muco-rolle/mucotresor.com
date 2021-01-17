@@ -4,4 +4,4 @@ export enum Routes {
     aboutMe = '/about',
 }
 
-export const ROOT_PATH = process.cwd() + '/src';
+export const DATA_PATH = process.cwd() + '/src/data';
