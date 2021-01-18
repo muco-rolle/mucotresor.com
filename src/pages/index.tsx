@@ -28,8 +28,8 @@ const HomePage = ({ posts }: HomePageProps) => {
                         Hey, I'm Muco Trésor
                     </Heading>
                     <Text>
-                        I'm a Fullstack web developer, I build things with code,
-                        mainly with{' '}
+                        I'm a self taught Fullstack web developer, I build
+                        things with code, mainly with{' '}
                         <Box as="strong">: Javascript/Typescript</Box>,{' '}
                         <Box as="strong">ReactJS</Box>,{' '}
                         <Box as="strong">NodeJS</Box>, and{' '}
@@ -73,11 +73,10 @@ const HomePage = ({ posts }: HomePageProps) => {
                                 </Heading>
                             </HStack>
                             <Text color="green.700">
-                                I build <b>web apps</b> for <b>startups</b>,
-                                <b>agencies</b> <b>businesses</b> and{' '}
-                                <b>public institutions</b> as a freelance web
-                                developer and designer. Let's discuss your needs
-                                and what solutions I can bring.
+                                I build <b>web apps</b> and <b>website</b> as a
+                                freelance web developer and I do{' '}
+                                <b>Mentorship</b>. Let's discuss your needs and
+                                what solutions I can bring.
                             </Text>
                             <HStack>
                                 <Button colorScheme="green">Contact me</Button>

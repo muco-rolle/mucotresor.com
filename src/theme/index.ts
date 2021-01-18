@@ -3,8 +3,8 @@ import { prismLightTheme } from './prism';
 
 export const theme = extendTheme({
     fonts: {
-        heading: `'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif`,
-        body: `'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif`,
+        heading: `'Inter', sans-serif`,
+        body: `'Inter', sans-serif`,
     },
     styles: {
         global: {
