@@ -29,8 +29,11 @@ export const Header = () => {
             align="center"
             p={4}
             top="0"
-            zIndex="10"
-            style={{ backdropFilter: `saturate(180%) blur(20px)` }}
+            zIndex={10}
+            style={{
+                backdropFilter: `saturate(180%) blur(20px)`,
+                transition: 'background-color 0.1 ease-in-out',
+            }}
         >
             {/* Logo */}
             <Box>
@@ -63,7 +66,8 @@ export const Header = () => {
                     <HStack>
                         <NavLink url={Routes.home}>Home</NavLink>
                         <NavLink url={Routes.blog}>Blog</NavLink>
-                        <NavLink url={Routes.aboutMe}>About</NavLink>
+                        <NavLink url={Routes.aboutMe}>About me</NavLink>
+                        <NavLink url={Routes.contactMe}>Contact me</NavLink>
                     </HStack>
                     <IconButton
                         aria-label="theme-switcher"

@@ -7,9 +7,8 @@ import { DocumentHead, GlobalStyles, PageTransition } from '@components';
 function App({ Component, pageProps }: AppProps) {
     return (
         <ChakraProvider theme={theme} resetCSS>
+            <GlobalStyles />
             <PageTransition>
-                <GlobalStyles />
-                <DocumentHead />
                 <Component {...pageProps} />
             </PageTransition>
         </ChakraProvider>

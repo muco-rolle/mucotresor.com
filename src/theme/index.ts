@@ -9,12 +9,6 @@ export const theme = extendTheme({
     styles: {
         global: {
             ...prismLightTheme,
-
-            html: {
-                scrollBehavior: 'smooth',
-                'text-rendering': 'optimizeLegibility',
-                'font-variant-ligatures': 'additional-ligatures',
-            },
         },
     },
 });

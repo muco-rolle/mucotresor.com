@@ -11,6 +11,7 @@ import {
     TextProps,
     BoxProps,
     HeadingProps,
+    AlertProps,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 
@@ -80,7 +81,7 @@ const CustomLink = (props) => {
     );
 };
 
-const Quote = (props) => {
+const Quote = (props: AlertProps) => {
     const { colorMode } = useColorMode();
     const bgColor = {
         light: 'green.50',
@@ -91,15 +92,10 @@ const Quote = (props) => {
         <Alert
             mt={4}
             w="98%"
-            bg={bgColor[colorMode]}
+            bg="green.50"
+            color="green.700"
             variant="left-accent"
             status="success"
-            css={{
-                '> *:first-of-type': {
-                    marginTop: 0,
-                    marginLeft: 8,
-                },
-            }}
             {...props}
         />
     );
@@ -182,7 +178,7 @@ export const MDXComponents = {
     td: TData,
     a: CustomLink,
     p: (props: TextProps) => (
-        <Text as="p" mt={2} lineHeight="tall" {...props} />
+        <Text as="p" my={5} lineHeight="tall" {...props} />
     ),
     ul: (props: BoxProps) => <Box as="ul" pt={2} pl={4} ml={2} {...props} />,
     ol: (props: BoxProps) => <Box as="ol" pt={2} pl={4} ml={2} {...props} />,
