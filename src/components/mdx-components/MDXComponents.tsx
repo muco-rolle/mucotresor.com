@@ -12,8 +12,13 @@ import {
     BoxProps,
     HeadingProps,
     AlertProps,
+    HStack,
+    IconButton,
+    CodeProps,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
+
+import { FiTwitter, FiGithub, FiMail } from 'react-icons/fi';
 
 // #0F9D58
 const Table = (props) => (
@@ -164,10 +169,10 @@ export const MDXComponents = {
     h2: (props: HeadingProps) => (
         <DocsHeading as="h2" fontWeight="bold" size="lg" {...props} />
     ),
-    h3: (props) => (
+    h3: (props: HeadingProps) => (
         <DocsHeading as="h3" size="md" fontWeight="bold" {...props} />
     ),
-    inlineCode: (props) => (
+    inlineCode: (props: CodeProps) => (
         <Code variantColor="yellow" fontSize="0.84em" {...props} />
     ),
     kbd: Kbd,
@@ -184,4 +189,9 @@ export const MDXComponents = {
     ol: (props: BoxProps) => <Box as="ol" pt={2} pl={4} ml={2} {...props} />,
     li: (props: BoxProps) => <Box as="li" pb={1} {...props} />,
     blockquote: Quote,
+    HStack,
+    IconButton,
+    FiTwitter,
+    FiGithub,
+    FiMail,
 };

@@ -7,6 +7,7 @@ import {
     Text,
     Box,
     Divider,
+    HStack,
 } from '@chakra-ui/react';
 import { parseISO, format } from 'date-fns';
 import hydrate from 'next-mdx-remote/hydrate';
@@ -28,20 +29,17 @@ const PostPage = ({ post }: any) => {
 
     useEffect(() => {
         const commentScript = document.createElement('script');
+
         commentScript.async = true;
+
         commentScript.src = 'https://utteranc.es/client.js';
-        // define the name of the repository you created here as 'owner/repo'
-        // or import it from your config file if you have one.
+
         commentScript.setAttribute('repo', 'muco-rolle/comments');
-        // define the blog post -> issue mapping (e.g. page pathname, page url).
-        // here the issues will be created with the page pathname as the issue title.
         commentScript.setAttribute('issue-term', 'pathname');
-        // define a custom label that you want added to your posts.
         commentScript.setAttribute('label', 'blog-comment');
-        // define if you want to use dark or light theme.
         commentScript.setAttribute('theme', 'github-light');
         commentScript.setAttribute('crossorigin', 'anonymous');
-        // we will append this script as a child to the ref element we have created above
+
         if (commentBox && commentBox.current) {
             (commentBox.current as any).appendChild(commentScript);
         } else {
@@ -97,14 +95,17 @@ const PostPage = ({ post }: any) => {
                         {frontMatter.readingTime.text}
                     </Text>
                 </Flex>
+
+                {/* Post content */}
                 <Box>{content}</Box>
 
                 <Heading as="h2" size="lg" fontWeight="900">
                     Comments
                 </Heading>
                 <Divider color="gray.300" />
+
+                {/* Post comments */}
                 <Comment ref={commentBox} />
-                {/* <Utterances /> */}
             </VStack>
         </MainLayout>
     );

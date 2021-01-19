@@ -4,9 +4,6 @@ publishedAt: '2020-06-25'
 summary: 'Hello again, today is a different topic'
 ---
 
-import { Contact } from 'components';
-import { Flex } from '@chakra-ui/core';
-
 Hello again, today is a different topic, I'm starting a series entitled **Inspire me**, which will include topics to inspire you, and push you to pursue your dream. So today we have a special guest, a talented young software engineer known as Snowblade. I wrote our discussion, you're going to read it in this form: **Trésor(me):** Asking a question, and **Freeman(Snowblade):** Replying question. Let's get started.
 
 **Trésor:** Hello, Snow, I'm happy to have you on my first episode of Inspire me. Can you please introduce yourself, and tell us a little bit about you?
@@ -83,28 +80,26 @@ What advice can you give to other young people or other people who are starting 
 
 If you have more questions, please get in touch with Snow on:
 
-<Flex justify="start" align="center" mt={4} mb={4}>
-<Contact
-url="https://twitter.com/tweepcoder"
-mr={2}
-aria-label="Twitter"
-icon="twitter"
-/>
-
-<Contact
-    url="https://github.com/snow-blade"
-    mr={2}
-    aria-label="Github"
-    icon="github"
-/>
-
-<Contact
-    url="mailto:freemanirabaruta@gmail.com"
-    mr={2}
-    aria-label="Gmail"
-    icon="mail"
-/>
-</Flex>
+<HStack>
+    <IconButton
+        as="a"
+        href="https://twitter.com/tweepcoder"
+        aria-label="Twitter"
+        icon={<FiTwitter />}
+    />
+    <IconButton
+        as="a"
+        href="https://github.com/snow-blade"
+        aria-label="Github"
+        icon={<FiGithub />}
+    />
+    <IconButton
+        as="a"
+        href="mailto:freemanirabaruta@gmail.com"
+        aria-label="Gmail"
+        icon={<FiMail />}
+    />
+</HStack>
 
 Thank you all, I hope you enjoyed reading this, can't wait to have you on the
 next post.
