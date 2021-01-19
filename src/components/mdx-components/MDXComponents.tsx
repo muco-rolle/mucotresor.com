@@ -173,7 +173,7 @@ export const MDXComponents = {
         <DocsHeading as="h3" size="md" fontWeight="bold" {...props} />
     ),
     inlineCode: (props: CodeProps) => (
-        <Code variantColor="yellow" fontSize="0.84em" {...props} />
+        <Code variantcolor="yellow" fontSize="0.84em" {...props} />
     ),
     kbd: Kbd,
     br: (props: BoxProps) => <Box height="24px" {...props} />,

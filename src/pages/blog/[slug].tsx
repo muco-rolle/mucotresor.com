@@ -8,19 +8,23 @@ import {
     Box,
     Divider,
     HStack,
+    Icon,
+    Button,
 } from '@chakra-ui/react';
 import { parseISO, format } from 'date-fns';
+import NextLink from 'next/link';
 import hydrate from 'next-mdx-remote/hydrate';
+import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 
 import { MDXComponents, Comment } from '@components';
 import { MainLayout } from '@layouts';
 import { Post } from '@types';
-import { getPost, postFilePaths } from '@utils';
+import { getPost, getPosts, postFilePaths } from '@utils';
 
-type PostPageProps = { post: Post };
+type PostPageProps = { post: Post; nextPost: Post; previousPost: Post };
 
-const PostPage = ({ post }: any) => {
-    const { mdxSource, frontMatter } = post;
+const PostPage = ({ post, nextPost, previousPost }: PostPageProps) => {
+    const { mdxSource, frontMatter } = post as any;
     const content = hydrate(mdxSource, {
         components: MDXComponents,
     });
@@ -99,6 +103,40 @@ const PostPage = ({ post }: any) => {
                 {/* Post content */}
                 <Box>{content}</Box>
 
+                <HStack spacing={10} justify="space-between">
+                    <VStack align="flex-start">
+                        {previousPost && (
+                            <NextLink href={`/blog/${previousPost.slug}`}>
+                                <a>
+                                    <Button leftIcon={<BsArrowLeft />}>
+                                        Previous
+                                    </Button>
+                                </a>
+                            </NextLink>
+                        )}
+
+                        {/* <Text>
+                            Previous Post with long title is there and loooong
+                            enough
+                        </Text> */}
+                    </VStack>
+
+                    <VStack align="flex-end">
+                        {nextPost && (
+                            <NextLink href={`/blog/${nextPost.slug}`}>
+                                <a>
+                                    <Button rightIcon={<BsArrowRight />}>
+                                        Next
+                                    </Button>
+                                </a>
+                            </NextLink>
+                        )}
+                        {/* <Text>
+                            Next Post with looong title is there and a little
+                            bit loooong
+                        </Text> */}
+                    </VStack>
+                </HStack>
                 <Heading as="h2" size="lg" fontWeight="900">
                     Comments
                 </Heading>
@@ -112,10 +150,26 @@ const PostPage = ({ post }: any) => {
 };
 
 export async function getStaticProps({ params }) {
-    const post = await getPost(params.slug);
+    const { slug } = params;
+
+    const post = await getPost(slug);
+    let posts = await getPosts();
+
+    const sortedPosts = posts.sort(
+        (prevPost, nextPost) =>
+            Number(new Date(nextPost.publishedAt)) -
+            Number(new Date(prevPost.publishedAt))
+    );
+
+    const currentPostIndex = sortedPosts.findIndex(
+        (post: Post) => post.slug === slug
+    );
+
+    const nextPost = sortedPosts[currentPostIndex - 1] || null;
+    const previousPost = sortedPosts[currentPostIndex + 1] || null;
 
     return {
-        props: { post },
+        props: { post, nextPost, previousPost },
     };
 }
 

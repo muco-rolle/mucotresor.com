@@ -28,6 +28,8 @@ export const GlobalStyles = () => (
 
             body {
                 font-family: 'Inter', sans-serif;
+                font-size: 18px;
+                color: #2D3748;
             }
 
             #__next {

@@ -67,7 +67,7 @@ export const Header = () => {
                         <NavLink url={Routes.home}>Home</NavLink>
                         <NavLink url={Routes.blog}>Blog</NavLink>
                         <NavLink url={Routes.aboutMe}>About me</NavLink>
-                        <NavLink url={Routes.contactMe}>Contact me</NavLink>
+                        {/* <NavLink url={Routes.contactMe}>Contact me</NavLink> */}
                     </HStack>
                     <IconButton
                         aria-label="theme-switcher"
