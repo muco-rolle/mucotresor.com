@@ -59,7 +59,7 @@ const PostPage = ({ post }: any) => {
     return (
         <MainLayout>
             <VStack as="article" align="stretch" spacing={5}>
-                <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
+                <Heading lineHeight="1.3" mb={2} as="h1" size="2xl">
                     {frontMatter.title}
                 </Heading>
                 <Flex
