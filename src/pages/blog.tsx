@@ -15,6 +15,7 @@ import { Posts } from '@types';
 import { getPosts } from '@utils';
 import React, { useState } from 'react';
 import { Search2Icon } from '@chakra-ui/icons';
+import { NextSeo } from 'next-seo';
 
 type BlogPageProps = {
     posts: Posts;
@@ -24,6 +25,17 @@ const BlogPage = ({ posts }: BlogPageProps) => {
 
     return (
         <MainLayout>
+            <NextSeo
+                title="Blog – Muco Trésor"
+                description="This blog contains posts to level up your programming skills and career as a self-taught programmer."
+                canonical="https://mucotresor.com/blog"
+                openGraph={{
+                    url: 'https://mucotresor.com/blog',
+                    title: 'Blog – Muco Trésor',
+                    description:
+                        'This blog contains posts to level up your programming skills and career as a self-taught programmer.',
+                }}
+            />
             <VStack spacing={8} align="stretch">
                 <VStack align="stretch" spacing={5}>
                     <Heading as="h2" size="xl" fontWeight="900">

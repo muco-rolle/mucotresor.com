@@ -1,18 +1,24 @@
 import {
     Box,
-    BoxProps,
     Button,
+    chakra,
     Heading,
     HStack,
     Icon,
+    SimpleGrid,
+    Stack,
     Text,
+    useColorModeValue,
     VStack,
+    Wrap,
+    WrapItem,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { MainLayout } from '@layouts';
 import { Posts } from '@types';
 import { getPosts } from '@utils';
-import styled from '@emotion/styled';
+import { companies } from '@data/companies';
+import React from 'react';
 
 type HomePageProps = { posts: Posts };
 const HomePage = ({ posts }: HomePageProps) => {
@@ -146,11 +152,11 @@ const HomePage = ({ posts }: HomePageProps) => {
              *  HOME PAGE
              *  Latest posts sections
              * ********************************************************* */}
-            <Box my={20}>
+            {/* <Box my={20}>
                 <Heading as="h2" size="xl" fontWeight="900">
-                    Trusted by:
+                    Trusted by tech companies:
                 </Heading>
-            </Box>
+            </Box> */}
         </MainLayout>
     );
 };

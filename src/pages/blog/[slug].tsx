@@ -16,7 +16,7 @@ import NextLink from 'next/link';
 import hydrate from 'next-mdx-remote/hydrate';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 
-import { MDXComponents, Comment } from '@components';
+import { MDXComponents, Comment, BlogSeo } from '@components';
 import { MainLayout } from '@layouts';
 import { Post } from '@types';
 import { getPost, getPosts, postFilePaths } from '@utils';
@@ -62,6 +62,10 @@ const PostPage = ({ post, nextPost, previousPost }: PostPageProps) => {
 
     return (
         <MainLayout>
+            <BlogSeo
+                url={`https://mucotresor.com/blog/${frontMatter.slug}`}
+                {...frontMatter}
+            />
             <VStack as="article" align="stretch" spacing={5}>
                 <Heading lineHeight="1.3" mb={2} as="h1" size="2xl">
                     {frontMatter.title}
