@@ -1,2 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> </urlset>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://mucotresor.comsrc//404</loc>
+    </url>
+
+    <url>
+        <loc>https://mucotresor.comsrc//about</loc>
+    </url>
+
+    <url>
+        <loc>https://mucotresor.comsrc//blog</loc>
+    </url>
+
+    <url>
+        <loc>https://mucotresor.comsrc//index</loc>
+    </url>
+
+    <url>
+        <loc
+            >https://mucotresor.comsrc//blog/inspire-me-episode-1-meet-a-teen-burundian-developer</loc
+        >
+    </url>
+
+    <url>
+        <loc
+            >https://mucotresor.comsrc//blog/learn-to-think-like-a-programmer</loc
+        >
+    </url>
+
+    <url>
+        <loc>https://mucotresor.comsrc//blog/teach-your-self-touch-typing</loc>
+    </url>
+</urlset>

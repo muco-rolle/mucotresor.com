@@ -1,24 +1,22 @@
 import {
     Box,
     Button,
-    chakra,
     Heading,
     HStack,
     Icon,
-    SimpleGrid,
-    Stack,
+    IconButton,
     Text,
-    useColorModeValue,
     VStack,
-    Wrap,
-    WrapItem,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { MainLayout } from '@layouts';
 import { Posts } from '@types';
 import { getPosts } from '@utils';
-import { companies } from '@data/companies';
 import React from 'react';
+import { Routes } from '@config';
+import Link from 'next/link';
+
+import { FiTwitter, FiGithub, FiMail } from 'react-icons/fi';
 
 type HomePageProps = { posts: Posts };
 const HomePage = ({ posts }: HomePageProps) => {
@@ -35,13 +33,37 @@ const HomePage = ({ posts }: HomePageProps) => {
                     </Heading>
                     <Text>
                         I'm a self taught Fullstack web developer, I build
-                        things with code, mainly with{' '}
+                        things with code, mainly with
                         <Box as="strong">: Javascript/Typescript</Box>,{' '}
                         <Box as="strong">ReactJS</Box>,{' '}
                         <Box as="strong">NodeJS</Box>, and{' '}
                         <Box as="strong">GraphQL</Box>.
                     </Text>
 
+                    <Box>
+                        <HStack>
+                            <HStack>
+                                <IconButton
+                                    as="a"
+                                    href="https://twitter.com/dev_muco"
+                                    aria-label="Twitter"
+                                    icon={<FiTwitter />}
+                                />
+                                <IconButton
+                                    as="a"
+                                    href="https://github.com/muco-rolle"
+                                    aria-label="Github"
+                                    icon={<FiGithub />}
+                                />
+                                <IconButton
+                                    as="a"
+                                    href="mailto:mucotresor@gmail.com"
+                                    aria-label="Gmail"
+                                    icon={<FiMail />}
+                                />
+                            </HStack>
+                        </HStack>
+                    </Box>
                     <Box
                         bg="green.50"
                         borderLeft="5px solid"
@@ -79,22 +101,31 @@ const HomePage = ({ posts }: HomePageProps) => {
                                 </Heading>
                             </HStack>
                             <Text color="green.700">
-                                I build <b>web apps</b> and <b>website</b> as a
-                                freelance web developer and I do{' '}
-                                <b>Mentorship</b>. Let's discuss your needs and
-                                what solutions I can bring.
+                                I build <b>web apps</b>, <b>websites</b>, and I
+                                do <b>Mentorship</b>, and <b>Consulting</b>.
+                                Let's discuss your needs and what solutions I
+                                can bring.
                             </Text>
-                            <HStack>
-                                <Button colorScheme="green">Contact me</Button>
-                                <Button
-                                    bg="green.100"
-                                    color="green.700"
-                                    _hover={{
-                                        bg: 'green.200',
-                                    }}
-                                >
-                                    More about me
-                                </Button>
+                            <HStack spacing={5}>
+                                <Link href="mailto:mucotresor@gmail.com">
+                                    <Button colorScheme="green">
+                                        Contact me
+                                    </Button>
+                                </Link>
+                                <NextLink href={Routes.aboutMe}>
+                                    <Button
+                                        bg="white"
+                                        color="green.500"
+                                        border="2px solid"
+                                        borderColor="green.500"
+                                        _hover={{
+                                            bg: 'green.500',
+                                            color: 'green.50',
+                                        }}
+                                    >
+                                        More about me
+                                    </Button>
+                                </NextLink>
                             </HStack>
                         </VStack>
                     </Box>
