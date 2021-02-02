@@ -8,15 +8,18 @@ import {
     HStack,
     IconButton,
     Link,
+    useColorMode,
 } from '@chakra-ui/react';
 import { Routes } from '@config';
-import { SunIcon } from '@chakra-ui/icons';
+import { SunIcon, MoonIcon } from '@chakra-ui/icons';
 
 interface NavLinkProps extends ButtonProps {
     url: string;
     children: ReactNode;
 }
 export const Header = () => {
+    const { colorMode, toggleColorMode } = useColorMode();
+
     return (
         <Flex
             as="header"
@@ -70,8 +73,11 @@ export const Header = () => {
                         {/* <NavLink url={Routes.contactMe}>Contact me</NavLink> */}
                     </HStack>
                     <IconButton
+                        onClick={toggleColorMode}
                         aria-label="theme-switcher"
-                        icon={<SunIcon />}
+                        icon={
+                            colorMode === 'light' ? <SunIcon /> : <MoonIcon />
+                        }
                         size="md"
                         borderRadius="100px"
                         bg="none"

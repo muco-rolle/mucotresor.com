@@ -164,7 +164,7 @@ const Hr = () => {
 
 export const MDXComponents = {
     h1: (props: HeadingProps) => (
-        <Heading as="h1" size="xl" my={4} {...props} />
+        <Heading as="h1" size="xl" fontWeight="bold" my={4} {...props} />
     ),
     h2: (props: HeadingProps) => (
         <DocsHeading as="h2" fontWeight="bold" size="lg" {...props} />

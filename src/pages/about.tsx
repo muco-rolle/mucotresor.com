@@ -7,11 +7,11 @@ const AboutPage = () => {
     return (
         <MainLayout>
             <NextSeo
-                title="About Me – Lee Robinson"
-                canonical="https://leerob.io/about"
+                title="About Me – Muco Trésor"
+                canonical="https://mucotoresor.com/about"
                 openGraph={{
-                    url: 'https://leerob.io/about',
-                    title: 'About Me – Lee Robinson',
+                    url: 'https://mucotoresor.com/about',
+                    title: 'About Me – Muco Trésor',
                 }}
             />
 

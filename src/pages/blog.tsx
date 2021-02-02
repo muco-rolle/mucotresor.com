@@ -46,6 +46,7 @@ const BlogPage = ({ posts }: BlogPageProps) => {
                     </Text>
                     <InputGroup my={4} mr={4} w="100%">
                         <Input
+                            boxShadow="search"
                             aria-label="Search articles"
                             onChange={(e) => setSearchValue(e.target.value)}
                             placeholder="Search articles"
