@@ -16,7 +16,14 @@ html {
     scroll-behavior: smooth;
 }
 
+<<<<<<< HEAD
 
+=======
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+}
+>>>>>>> edd40e9b26e3a6436d6dab50aaba93567692b3d9
 
 #__next {
     display: flex;

@@ -1,6 +1,4 @@
-import { extendTheme, useColorModeValue } from '@chakra-ui/react';
-import { mode, getColor } from '@chakra-ui/theme-tools';
-import { prismLightTheme, prismDarkTheme } from './prism';
+import { extendTheme } from '@chakra-ui/react';
 
 export const theme = extendTheme({
     fonts: {
