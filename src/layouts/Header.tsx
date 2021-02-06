@@ -9,6 +9,7 @@ import {
     IconButton,
     Link,
     useColorMode,
+    useColorModeValue,
 } from '@chakra-ui/react';
 import { Routes } from '@config';
 import { SunIcon, MoonIcon } from '@chakra-ui/icons';
@@ -33,6 +34,10 @@ export const Header = () => {
             p={4}
             top="0"
             zIndex={10}
+            bg={useColorModeValue(
+                'rgba(255, 255, 255, 0.8)',
+                'rgba(26, 32, 44,0.8)'
+            )}
             style={{
                 backdropFilter: `saturate(180%) blur(20px)`,
                 transition: 'background-color 0.1 ease-in-out',

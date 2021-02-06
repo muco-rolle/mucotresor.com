@@ -9,7 +9,9 @@ export const theme = extendTheme({
     styles: {
         global: (props) => ({
             body: {
-                fontFamily: "'Inter', sans-serif",
+                fontFamily: "'HK Grotesk', sans-serif",
+                fontSize: '18px',
+                fontWeight: 'normal',
             },
             // ...prismLightTheme,
             // ...prismDarkTheme,

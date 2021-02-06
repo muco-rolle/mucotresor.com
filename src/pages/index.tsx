@@ -42,11 +42,12 @@ const HomePage = ({ posts }: HomePageProps) => {
 
                     <Box>
                         <HStack>
-                            <HStack>
+                            <HStack spacing={3}>
                                 <IconButton
                                     as="a"
                                     href="https://twitter.com/dev_muco"
                                     aria-label="Twitter"
+                                    borderRadius="100%"
                                     icon={<FiTwitter />}
                                 />
                                 <IconButton
@@ -54,12 +55,14 @@ const HomePage = ({ posts }: HomePageProps) => {
                                     href="https://github.com/muco-rolle"
                                     aria-label="Github"
                                     icon={<FiGithub />}
+                                    borderRadius="100%"
                                 />
                                 <IconButton
                                     as="a"
                                     href="mailto:mucotresor@gmail.com"
                                     aria-label="Gmail"
                                     icon={<FiMail />}
+                                    borderRadius="100%"
                                 />
                             </HStack>
                         </HStack>
