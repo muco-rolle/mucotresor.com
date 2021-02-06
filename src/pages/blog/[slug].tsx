@@ -158,20 +158,7 @@ const PostPage = ({ post, nextPost, previousPost }: PostPageProps) => {
 
                 {/* Post comments */}
 
-                {loading ? (
-                    <Flex justify="center">
-                        <Spinner
-                            align="center"
-                            thickness="4px"
-                            speed="0.65s"
-                            emptyColor="gray.200"
-                            color="green.500"
-                            size="lg"
-                        />
-                    </Flex>
-                ) : (
-                    <Comment ref={commentBox} />
-                )}
+                <Comment ref={commentBox} />
             </VStack>
         </MainLayout>
     );
