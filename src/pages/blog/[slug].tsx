@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
     Avatar,
     Flex,
@@ -10,6 +10,7 @@ import {
     HStack,
     Button,
     useColorModeValue,
+    Spinner,
 } from '@chakra-ui/react';
 import { parseISO, format } from 'date-fns';
 import NextLink from 'next/link';
@@ -24,6 +25,7 @@ import { getPost, getPosts, postFilePaths } from '@utils';
 type PostPageProps = { post: Post; nextPost: Post; previousPost: Post };
 
 const PostPage = ({ post, nextPost, previousPost }: PostPageProps) => {
+    const [loading, setLoading] = useState(false);
     const { mdxSource, frontMatter } = post as any;
     const content = hydrate(mdxSource, {
         components: MDXComponents,
@@ -34,6 +36,7 @@ const PostPage = ({ post, nextPost, previousPost }: PostPageProps) => {
     const theme = useColorModeValue('github-light', 'dark-blue');
 
     useEffect(() => {
+        setLoading(true);
         const commentScript = document.createElement('script');
 
         console.log(theme);
@@ -55,6 +58,7 @@ const PostPage = ({ post, nextPost, previousPost }: PostPageProps) => {
         }
 
         const removeScript = () => {
+            setLoading(false);
             commentScript.remove();
             document
                 .querySelectorAll('.utterances')
@@ -62,7 +66,7 @@ const PostPage = ({ post, nextPost, previousPost }: PostPageProps) => {
         };
 
         return () => removeScript();
-    }, [theme]);
+    }, [theme, loading]);
 
     return (
         <MainLayout>
@@ -151,7 +155,21 @@ const PostPage = ({ post, nextPost, previousPost }: PostPageProps) => {
                 <Divider color="gray.300" />
 
                 {/* Post comments */}
-                <Comment ref={commentBox} />
+
+                {loading ? (
+                    <Flex justify="center">
+                        <Spinner
+                            align="center"
+                            thickness="4px"
+                            speed="0.65s"
+                            emptyColor="gray.200"
+                            color="green.500"
+                            size="lg"
+                        />
+                    </Flex>
+                ) : (
+                    <Comment ref={commentBox} />
+                )}
             </VStack>
         </MainLayout>
     );

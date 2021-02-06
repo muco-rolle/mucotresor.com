@@ -88,7 +88,7 @@ export const Header = () => {
                         onClick={toggleColorMode}
                         aria-label="theme-switcher"
                         icon={
-                            colorMode === 'light' ? <SunIcon /> : <MoonIcon />
+                            colorMode === 'light' ? <MoonIcon /> : <SunIcon />
                         }
                         size="md"
                         borderRadius="100px"
