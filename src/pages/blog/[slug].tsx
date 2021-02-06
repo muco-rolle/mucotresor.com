@@ -8,8 +8,8 @@ import {
     Box,
     Divider,
     HStack,
-    Icon,
     Button,
+    useColorModeValue,
 } from '@chakra-ui/react';
 import { parseISO, format } from 'date-fns';
 import NextLink from 'next/link';
@@ -31,8 +31,12 @@ const PostPage = ({ post, nextPost, previousPost }: PostPageProps) => {
 
     const commentBox = useRef();
 
+    const theme = useColorModeValue('github-light', 'dark-blue');
+
     useEffect(() => {
         const commentScript = document.createElement('script');
+
+        console.log(theme);
 
         commentScript.async = true;
 
@@ -41,7 +45,7 @@ const PostPage = ({ post, nextPost, previousPost }: PostPageProps) => {
         commentScript.setAttribute('repo', 'muco-rolle/comments');
         commentScript.setAttribute('issue-term', 'pathname');
         commentScript.setAttribute('label', 'blog-comment');
-        commentScript.setAttribute('theme', 'github-light');
+        commentScript.setAttribute('theme', theme);
         commentScript.setAttribute('crossorigin', 'anonymous');
 
         if (commentBox && commentBox.current) {
@@ -58,7 +62,7 @@ const PostPage = ({ post, nextPost, previousPost }: PostPageProps) => {
         };
 
         return () => removeScript();
-    }, []);
+    }, [theme]);
 
     return (
         <MainLayout>
