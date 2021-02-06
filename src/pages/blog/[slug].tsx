@@ -58,15 +58,17 @@ const PostPage = ({ post, nextPost, previousPost }: PostPageProps) => {
         }
 
         const removeScript = () => {
-            setLoading(false);
             commentScript.remove();
             document
                 .querySelectorAll('.utterances')
                 .forEach((el) => el.remove());
         };
 
-        return () => removeScript();
-    }, [theme, loading]);
+        return () => {
+            setLoading(false);
+            removeScript();
+        };
+    }, [theme]);
 
     return (
         <MainLayout>
