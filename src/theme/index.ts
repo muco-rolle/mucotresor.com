@@ -11,7 +11,6 @@ export const theme = extendTheme({
             body: {
                 fontFamily: "'HK Grotesk', sans-serif",
                 fontSize: '18px',
-                fontWeight: 'normal',
             },
             // ...prismLightTheme,
             // ...prismDarkTheme,

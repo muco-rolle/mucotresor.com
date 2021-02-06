@@ -15,6 +15,7 @@ import {
     HStack,
     IconButton,
     CodeProps,
+    useColorModeValue,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 
@@ -87,18 +88,12 @@ const CustomLink = (props) => {
 };
 
 const Quote = (props: AlertProps) => {
-    const { colorMode } = useColorMode();
-    const bgColor = {
-        light: 'green.50',
-        dark: 'green.900',
-    };
-
     return (
         <Alert
             mt={4}
             w="98%"
-            bg="green.50"
-            color="green.700"
+            bg={useColorModeValue('green.50', 'green.900')}
+            color={useColorModeValue('green.700', 'green.50')}
             variant="left-accent"
             status="success"
             {...props}
