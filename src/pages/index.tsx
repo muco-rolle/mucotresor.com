@@ -3,11 +3,8 @@ import {
     Button,
     Heading,
     HStack,
-    Icon,
     IconButton,
     Text,
-    Tooltip,
-    useColorModeValue,
     VStack,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
@@ -15,11 +12,9 @@ import { MainLayout } from '@layouts';
 import { Posts } from '@types';
 import { getPosts } from '@utils';
 import React from 'react';
-import { Routes } from '@config';
-import Link from 'next/link';
 
 import { FiTwitter, FiGithub, FiMail } from 'react-icons/fi';
-import { FaWhatsapp, FaLinkedinIn } from 'react-icons/fa';
+import { FaLinkedinIn } from 'react-icons/fa';
 
 type HomePageProps = { posts: Posts };
 const HomePage = ({ posts }: HomePageProps) => {
@@ -80,7 +75,7 @@ const HomePage = ({ posts }: HomePageProps) => {
                             </HStack>
                         </HStack>
                     </Box>
-                    <Box
+                    {/* <Box
                         borderRadius="sm"
                         bg={useColorModeValue('green.50', 'green.900')}
                         borderLeft="5px solid"
@@ -143,7 +138,7 @@ const HomePage = ({ posts }: HomePageProps) => {
                                         Contact me
                                     </Button>
                                 </Link>
-                                {/* <NextLink href={Routes.aboutMe}>
+                                <NextLink href={Routes.aboutMe}>
                                     <Button
                                         bg="white"
                                         color="green.500"
@@ -156,10 +151,10 @@ const HomePage = ({ posts }: HomePageProps) => {
                                     >
                                         More about me
                                     </Button>
-                                </NextLink> */}
+                                </NextLink>
                             </HStack>
                         </VStack>
-                    </Box>
+                    </Box> */}
                 </VStack>
             </Box>
 
@@ -209,16 +204,6 @@ const HomePage = ({ posts }: HomePageProps) => {
                     </Box>
                 </VStack>
             </Box>
-
-            {/**********************************************************
-             *  HOME PAGE
-             *  Latest posts sections
-             * ********************************************************* */}
-            {/* <Box my={20}>
-                <Heading as="h2" size="xl" fontWeight="900">
-                    Trusted by tech companies:
-                </Heading>
-            </Box> */}
         </MainLayout>
     );
 };

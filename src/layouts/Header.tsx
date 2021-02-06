@@ -46,7 +46,7 @@ export const Header = () => {
             {/* Logo */}
             <Box>
                 <NextLink href={Routes.home}>
-                    <Link>
+                    <Link _hover={{ textDecor: 'none' }}>
                         <Box
                             as="span"
                             display="flex"
@@ -62,7 +62,14 @@ export const Header = () => {
                             fontWeight="bold"
                             boxShadow="0 0 5px rgba(0, 0, 0, 0.3)"
                         >
-                            <Box as="span">T</Box>
+                            <Box
+                                as="span"
+                                fontFamily="inherit"
+                                fontWeight="bold"
+                                fontSize="10px"
+                            >
+                                MT
+                            </Box>
                         </Box>
                     </Link>
                 </NextLink>
@@ -86,8 +93,6 @@ export const Header = () => {
                         size="md"
                         borderRadius="100px"
                         bg="none"
-                        _hover={{ bg: 'green.100' }}
-                        _active={{ bg: 'green.200' }}
                     />
                 </HStack>
             </Box>

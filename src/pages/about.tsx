@@ -1,7 +1,18 @@
 import React from 'react';
 import { MainLayout } from '@layouts';
 import { NextSeo } from 'next-seo';
-import { Box, Avatar, Heading, VStack, Text } from '@chakra-ui/react';
+import {
+    Box,
+    Avatar,
+    Heading,
+    VStack,
+    Text,
+    HStack,
+    IconButton,
+} from '@chakra-ui/react';
+
+import { FiTwitter, FiGithub, FiMail } from 'react-icons/fi';
+import { FaLinkedinIn } from 'react-icons/fa';
 
 const AboutPage = () => {
     return (
@@ -42,7 +53,7 @@ const AboutPage = () => {
                 </Box>
 
                 <Box>
-                    <Text>
+                    <Text mb={3}>
                         I'm a self taught Fullstack web developer, I build
                         things with code, mainly with{' '}
                         <Box as="strong">: Javascript/Typescript</Box>,{' '}
@@ -70,6 +81,44 @@ const AboutPage = () => {
                         glad to help. Get in touch with me on any of these
                         platforms below.
                     </Text>
+
+                    <Box>
+                        <HStack>
+                            <HStack spacing={3}>
+                                <IconButton
+                                    as="a"
+                                    href="https://github.com/muco-rolle"
+                                    aria-label="Github"
+                                    icon={<FiGithub />}
+                                    borderRadius="100%"
+                                />
+
+                                <IconButton
+                                    as="a"
+                                    href="https://twitter.com/dev_muco"
+                                    aria-label="Twitter"
+                                    borderRadius="100%"
+                                    icon={<FiTwitter />}
+                                />
+
+                                <IconButton
+                                    as="a"
+                                    href="https://www.linkedin.com/in/muco-tresor-949b131a7/"
+                                    aria-label="Twitter"
+                                    borderRadius="100%"
+                                    icon={<FaLinkedinIn />}
+                                />
+
+                                <IconButton
+                                    as="a"
+                                    href="mailto:mucotresor@gmail.com"
+                                    aria-label="Gmail"
+                                    icon={<FiMail />}
+                                    borderRadius="100%"
+                                />
+                            </HStack>
+                        </HStack>
+                    </Box>
                 </Box>
             </VStack>
         </MainLayout>
