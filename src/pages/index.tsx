@@ -15,9 +15,18 @@ import React from 'react';
 
 import { FiTwitter, FiGithub, FiMail } from 'react-icons/fi';
 import { FaLinkedinIn } from 'react-icons/fa';
+import { Routes } from '@config';
 
 type HomePageProps = { posts: Posts };
 const HomePage = ({ posts }: HomePageProps) => {
+    const sortedPosts = posts
+        ?.slice(0, 5)
+        .sort(
+            (prevPost, nextPost) =>
+                Number(new Date(nextPost.publishedAt)) -
+                Number(new Date(prevPost.publishedAt))
+        );
+
     return (
         <MainLayout>
             {/**********************************************************
@@ -170,36 +179,35 @@ const HomePage = ({ posts }: HomePageProps) => {
 
                     <Box>
                         <VStack spacing={8} align="flex-start">
-                            {posts
-                                ?.slice(0, 3)
-                                .sort(
-                                    (prevPost, nextPost) =>
-                                        Number(new Date(nextPost.publishedAt)) -
-                                        Number(new Date(prevPost.publishedAt))
-                                )
-                                .map(({ title, slug, summary }) => (
-                                    <NextLink href={`/blog/${slug}`} key={slug}>
-                                        <a>
-                                            <VStack
-                                                align="flex-start"
-                                                spacing={3}
+                            {sortedPosts.map(({ title, slug, summary }) => (
+                                <NextLink href={`/blog/${slug}`} key={slug}>
+                                    <a>
+                                        <VStack align="flex-start" spacing={3}>
+                                            <Heading
+                                                pos="relative"
+                                                as="h3"
+                                                size="md"
+                                                _hover={{
+                                                    color: 'green.500',
+                                                }}
                                             >
-                                                <Heading
-                                                    pos="relative"
-                                                    as="h3"
-                                                    size="md"
-                                                    _hover={{
-                                                        color: 'green.500',
-                                                    }}
-                                                >
-                                                    {title}
-                                                </Heading>
-                                                <Text>{summary}</Text>
-                                            </VStack>
-                                        </a>
-                                    </NextLink>
-                                ))}
-                            <Button colorScheme="green">Read All posts</Button>
+                                                {title}
+                                            </Heading>
+                                            <Text>{summary}</Text>
+                                        </VStack>
+                                    </a>
+                                </NextLink>
+                            ))}
+
+                            {sortedPosts.length >= 5 ? (
+                                <NextLink href={Routes.blog}>
+                                    <a>
+                                        <Button colorScheme="green">
+                                            Read All posts
+                                        </Button>
+                                    </a>
+                                </NextLink>
+                            ) : null}
                         </VStack>
                     </Box>
                 </VStack>
