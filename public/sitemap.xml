@@ -1,34 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://mucotresor.comsrc//404</loc>
+        <loc>https://mucotresor.com/404</loc>
     </url>
 
     <url>
-        <loc>https://mucotresor.comsrc//about</loc>
+        <loc>https://mucotresor.com/about</loc>
     </url>
 
     <url>
-        <loc>https://mucotresor.comsrc//blog</loc>
+        <loc>https://mucotresor.com/blog</loc>
     </url>
 
     <url>
-        <loc>https://mucotresor.comsrc//index</loc>
+        <loc>https://mucotresor.com</loc>
     </url>
 
     <url>
         <loc
-            >https://mucotresor.comsrc//blog/inspire-me-episode-1-meet-a-teen-burundian-developer</loc
+            >https://mucotresor.com/blog/changes-i-made-while-updating-my-personal-site</loc
         >
     </url>
 
     <url>
         <loc
-            >https://mucotresor.comsrc//blog/learn-to-think-like-a-programmer</loc
+            >https://mucotresor.com/blog/inspire-me-episode-1-meet-a-teen-burundian-developer</loc
         >
     </url>
 
     <url>
-        <loc>https://mucotresor.comsrc//blog/teach-your-self-touch-typing</loc>
+        <loc>https://mucotresor.com/blog/learn-to-think-like-a-programmer</loc>
+    </url>
+
+    <url>
+        <loc>https://mucotresor.com/blog/teach-your-self-touch-typing</loc>
     </url>
 </urlset>

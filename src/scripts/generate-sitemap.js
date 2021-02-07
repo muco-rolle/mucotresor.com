@@ -17,8 +17,8 @@ const prettier = require('prettier');
             ${pages
                 .map((page) => {
                     const path = page
-                        .replace('pages', '')
-                        .replace('data', '')
+                        .replace('src/pages', '')
+                        .replace('src/data', '')
                         .replace('.tsx', '')
                         .replace('.mdx', '');
                     const route = path === '/index' ? '' : path;
@@ -37,6 +37,8 @@ const prettier = require('prettier');
         parser: 'html',
     });
 
+
+    console.log(formatted)
     // eslint-disable-next-line no-sync
     fs.writeFileSync('public/sitemap.xml', formatted);
 })();
