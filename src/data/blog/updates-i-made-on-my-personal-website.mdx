@@ -1,0 +1,39 @@
+---
+title: 'Updates I Made On My Personal Website'
+publishedAt: '2021-02-07'
+summary: 'Having your personal site built on a framework that is growing at a rapid pace like Next.js, comes with a cost...'
+---
+
+Having your personal site built on a framework that is growing at a rapid pace like Next.js, comes with a cost. It can get out of date in a short time, and it can take you much time to upgrade it, but there's a benefit too. Getting an opportunity to try out new things and experiment with your favorite technologies, because sometimes at work you're forced to work with different technologies you don't like. Recently I managed to find time to update my personal site, in this post I'm gonna talk about changes I made, I hope it can be helpful to someone.
+
+### Next.js upgraded to v10
+
+Next.js introduced version 10 featuring some cool features like:
+
+-   Built-in Image Component and Automatic Image Optimization
+-   Internationalized Routing
+
+and many more. You can read the [release blog](https://nextjs.org/blog/next-10) to learn more.
+
+### Chakra UI upgraded to v1
+
+Chakra UI is an underrated UI library that exists in the React ecosystem, recently the team behind Chakra has announced the release of version 1 featuring a lot of improvements.
+
+-   Upgrade to React 17 and Emotion 11
+-   Component Theming API
+-   Color Mode improvements
+-   Chakra JSX Elements
+
+Those are the highlight from their release blog post, but there's more you can check out the [docs website](https://chakra-ui.com/docs/getting-started) to learn more. If you like tailwind CSS you will like using Chakra UI in React too.
+
+### Github Issues As My Comment system
+
+You can now leave a comment on all my posts thanks to an awesome project created by [Jeremy Danyow](https://github.com/jdanyow), I actually came to know it when I was reading a post from [adonis.js](https://preview.adonisjs.com/blog/introducing-adonisjs-v5/) website, and I was surprised at the end of the post I saw a comment system that looks like the GitHub one. I was wondering 🤔 if they replicated the same design, but suddenly I saw at the top of the comment form a link says _powered by [utteranc.es](https://utteranc.es)_, I immediately clicked on it and find out that it is an open-source comments widget built on GitHub issues, and it was even easier to implement it. On the link I shared above you can even see that it has an easier guide on how to add it to your website.
+
+### MDX
+
+In the previous version of this website I was using `next-mdx-enhanced` mostly for front matter and layout support. The author of that project has added a warning on its Github repo that says:
+
+> You probably should be using `next-mdx-remote` instead of this library. It is ~50% faster, more flexible with content storage, does not induce memory issues at scale, and fits much better with the way that data is intended to flow through next.js.
+
+In this version, I migrated to `next-mdx-remote`, and it refines some of the issues of `next-mdx-enhanced`.

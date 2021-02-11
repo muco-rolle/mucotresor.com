@@ -38,7 +38,6 @@ const prettier = require('prettier');
     });
 
 
-    console.log(formatted)
     // eslint-disable-next-line no-sync
     fs.writeFileSync('public/sitemap.xml', formatted);
 })();
