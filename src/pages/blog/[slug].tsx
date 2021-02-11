@@ -39,8 +39,6 @@ const PostPage = ({ post, nextPost, previousPost }: PostPageProps) => {
         setLoading(true);
         const commentScript = document.createElement('script');
 
-        console.log(theme);
-
         commentScript.async = true;
 
         commentScript.src = 'https://utteranc.es/client.js';
