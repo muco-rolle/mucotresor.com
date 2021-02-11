@@ -18,12 +18,6 @@
 
     <url>
         <loc
-            >https://mucotresor.com/blog/changes-i-made-while-updating-my-personal-site</loc
-        >
-    </url>
-
-    <url>
-        <loc
             >https://mucotresor.com/blog/inspire-me-episode-1-meet-a-teen-burundian-developer</loc
         >
     </url>
@@ -34,5 +28,11 @@
 
     <url>
         <loc>https://mucotresor.com/blog/teach-your-self-touch-typing</loc>
+    </url>
+
+    <url>
+        <loc
+            >https://mucotresor.com/blog/updates-i-made-on-my-personal-website</loc
+        >
     </url>
 </urlset>
