@@ -1,0 +1,8 @@
+---
+title: 'Why React.js is a Right Framework for Beginners'
+publishedAt: '2021-02-07'
+summary: 'Having your personal site built on a framework that is growing at a rapid pace like Next.js, comes with a cost...'
+---
+
+When you're building a GraphQL API(Application Programming Interface) you usually start by describing how the client will interact with your API
+by writting the schema in GraphQL SDL(Schema Definition Language) and then writting resolvers to resolve the schema. the frustration come when you're using a typed language like typescript
