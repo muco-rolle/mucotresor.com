@@ -16,12 +16,19 @@ class Document extends NextDocument {
     render() {
         return (
             <Html lang="en">
-                <Head />
+                <Head>
 
+                    
                 <link
                     rel="stylesheet"
                     href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/hk-grotesk.min.css"
                 />
+                    <script async defer data-domain="mucotresor.com" src="https://plausible.io/js/plausible.js"></script>
+
+                </Head>
+
+                
+                
 
                 <body>
                     <ColorModeScript />
