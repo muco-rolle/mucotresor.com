@@ -60,7 +60,7 @@ const HomePage = ({ posts }: HomePageProps) => {
 
                                 <IconButton
                                     as="a"
-                                    href="https://twitter.com/dev_muco"
+                                    href="https://twitter.com/mucotreso"
                                     aria-label="Twitter"
                                     borderRadius="100%"
                                     icon={<FiTwitter />}
