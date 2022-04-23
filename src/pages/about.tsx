@@ -1,18 +1,17 @@
-import React from 'react';
-import { MainLayout } from '@layouts';
-import { NextSeo } from 'next-seo';
 import {
     Box,
-    Avatar,
     Heading,
-    VStack,
-    Text,
     HStack,
     IconButton,
+    Text,
+    VStack,
 } from '@chakra-ui/react';
-
-import { FiTwitter, FiGithub, FiMail } from 'react-icons/fi';
+import { Avatar } from '@components';
+import { MainLayout } from '@layouts';
+import { NextSeo } from 'next-seo';
+import React from 'react';
 import { FaLinkedinIn } from 'react-icons/fa';
+import { FiGithub, FiMail, FiTwitter } from 'react-icons/fi';
 
 const AboutPage = () => {
     return (
@@ -44,12 +43,8 @@ const AboutPage = () => {
                     >
                         About me
                     </Heading>
-                    <Avatar
-                        size="2xl"
-                        name="Muco Trésor"
-                        src="./assets/muco.jpg"
-                        textAlign="center"
-                    />
+
+                    <Avatar />
                 </Box>
 
                 <Box>

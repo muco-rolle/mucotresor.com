@@ -4,18 +4,19 @@ import {
     Heading,
     HStack,
     IconButton,
+    Link,
+    Stack,
     Text,
     VStack,
 } from '@chakra-ui/react';
-import NextLink from 'next/link';
+import { Routes } from '@config';
 import { MainLayout } from '@layouts';
 import { Posts } from '@types';
 import { getPosts } from '@utils';
+import NextLink from 'next/link';
 import React from 'react';
-
-import { FiTwitter, FiGithub, FiMail } from 'react-icons/fi';
 import { FaLinkedinIn } from 'react-icons/fa';
-import { Routes } from '@config';
+import { FiGithub, FiMail, FiTwitter } from 'react-icons/fi';
 
 type HomePageProps = { posts: Posts };
 const HomePage = ({ posts }: HomePageProps) => {
@@ -35,17 +36,37 @@ const HomePage = ({ posts }: HomePageProps) => {
              * ********************************************************* */}
             <Box>
                 <VStack align="flex-start" spacing={5}>
-                    <Heading as="h1" size="2xl" fontWeight="900">
-                        Hey, I'm Muco Trésor
-                    </Heading>
-                    <Text>
-                        I'm a self taught Fullstack web developer, I build
-                        things with code, mainly with
-                        <Box as="strong">: Javascript/Typescript</Box>,{' '}
-                        <Box as="strong">ReactJS</Box>,{' '}
-                        <Box as="strong">NodeJS</Box>, and{' '}
-                        <Box as="strong">GraphQL</Box>.
-                    </Text>
+                    <Stack spacing="6">
+                        <Stack>
+                            <Heading as="h1" size="2xl" fontWeight="900">
+                                Trésor Muco
+                            </Heading>
+                            <Text>
+                                Developer Advocate at{' '}
+                                <Box
+                                    as={Link}
+                                    href="https://leapa.co"
+                                    color={'green.500'}
+                                    fontWeight="900"
+                                    target="_blank"
+                                >
+                                    Leapa
+                                </Box>
+                            </Text>
+                        </Stack>
+
+                        <Text>
+                            I&apos;m a full-stack developer, building things
+                            with code, mainly with:
+                            <Box as="strong">
+                                {' '}
+                                <br />
+                                Typescript, React & Next.js
+                            </Box>
+                            , <Box as="strong">Node.js & Adonis.js</Box>, and{' '}
+                            <Box as="strong">GraphQL</Box>.
+                        </Text>
+                    </Stack>
 
                     <Box>
                         <HStack>
@@ -84,86 +105,6 @@ const HomePage = ({ posts }: HomePageProps) => {
                             </HStack>
                         </HStack>
                     </Box>
-                    {/* <Box
-                        borderRadius="sm"
-                        bg={useColorModeValue('green.50', 'green.900')}
-                        borderLeft="5px solid"
-                        borderColor={useColorModeValue(
-                            'green.500',
-                            'green.500'
-                        )}
-                        py={5}
-                        px={5}
-                    >
-                        <VStack align="flex-start" spacing={5}>
-                            <HStack>
-                                <Icon
-                                    stroke="currentColor"
-                                    fill="none"
-                                    strokeWidth="2"
-                                    viewBox="0 0 24 24"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    className="css-1xzrexu"
-                                    style={{
-                                        color: useColorModeValue(
-                                            'green.700',
-                                            'green.50'
-                                        ),
-                                        fontSize: '20px',
-                                        fontWeight: 'bold',
-                                    }}
-                                    height="1em"
-                                    width="1em"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                                </Icon>
-                                <Heading
-                                    as="h3"
-                                    color={useColorModeValue(
-                                        'green.700',
-                                        'green.50'
-                                    )}
-                                    fontSize="2xl"
-                                >
-                                    Hire me!
-                                </Heading>
-                            </HStack>
-                            <Text
-                                color={useColorModeValue(
-                                    'green.700',
-                                    'green.50'
-                                )}
-                            >
-                                I build <b>web apps</b>, <b>websites</b>, and I
-                                do <b>Mentorship</b>, and <b>Consulting</b>.
-                                Let's discuss your needs and what solutions I
-                                can bring.
-                            </Text>
-                            <HStack spacing={5}>
-                                <Link href="mailto:mucotresor@gmail.com">
-                                    <Button colorScheme="green">
-                                        Contact me
-                                    </Button>
-                                </Link>
-                                <NextLink href={Routes.aboutMe}>
-                                    <Button
-                                        bg="white"
-                                        color="green.500"
-                                        border="2px solid"
-                                        borderColor="green.500"
-                                        _hover={{
-                                            bg: 'green.500',
-                                            color: 'green.50',
-                                        }}
-                                    >
-                                        More about me
-                                    </Button>
-                                </NextLink>
-                            </HStack>
-                        </VStack>
-                    </Box> */}
                 </VStack>
             </Box>
 
