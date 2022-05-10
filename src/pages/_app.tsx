@@ -1,10 +1,9 @@
 import { ChakraProvider } from '@chakra-ui/react';
-import type { AppProps } from 'next/app';
-import { DefaultSeo } from 'next-seo';
-
-import { theme } from '@theme';
 import { GlobalStyles, PageTransition } from '@components';
 import { SEO } from '@config';
+import { theme } from '@theme';
+import { DefaultSeo } from 'next-seo';
+import type { AppProps } from 'next/app';
 
 function App({ Component, pageProps }: AppProps) {
     return (

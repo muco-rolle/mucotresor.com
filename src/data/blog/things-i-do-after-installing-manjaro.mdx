@@ -1,0 +1,37 @@
+---
+title: 'Setup a clean and beautiful development environment with Manjaro Gnome'
+publishedAt: '2022-04-23'
+summary: "If you ask me a question, and I don't know the answer, I'm gonna tell you that I don't know. But I bet you what. I know how to find the answer, and I will find the answer."
+---
+
+If you stop and think about it, the more clean and enjoyable your working environment is, the more productive you are.
+
+In this article I will help you to setup a minimalistic, clean and beautiful working environment in your Manjaro Gnome.
+
+I presume that you have a fresh installation of Manjaro Gnome but if you are running another Linux distro or you have a different desktop environment which is not Gnome you can still follow, you will find some useful tips that you can also do add in your setup.
+
+Most of the things I'll be showing you here can work in any Linux distro but you will have the exact same setup if the distro installed in your computer is running Gnome desktop environment.
+
+> What I'm sharing here is based on my own experience and preference.
+
+## Configure Your System
+
+The mindset behind most Linux distros is to give you the things you need and at the same time you have possibilities to configure it and make it your own.
+
+The following, is a list of things I do after a clean installation of Manjaro.
+
+### 1. Point to the fastest mirror
+
+Usually the first recommended thing to do is to update your system. Since updating involves downloading packages for me the first thing I do, is to point to the fastest mirror to improve packages download speed.
+
+What is a mirror ?
+
+In the GNU/Linux distro world a mirror is a server that hosts an up to date copy of a distro's software packages, stored in repositories (repos). [Learn more](https://wiki.manjaro.org/index.php/Manjaro_Mirrors)
+
+The mirror servers are typically positioned at a geographically different location from the main server.
+
+Pointing to the fastest mirror simply means to tell your system to download packages from a server that is close to you geographically. Needless to say, download speeds from a physically close server are going to be faster compared to those located on the other side of the globe.
+
+Now to point to the fastest mirror open your terminal and run the following command
+
+`sudo pacman-mirrors --fasttrack`
