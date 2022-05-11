@@ -1,27 +1,26 @@
 import {
-    Box,
     Alert,
+    AlertProps,
+    Box,
+    BoxProps,
     Code,
+    CodeProps,
+    Divider,
     Heading,
+    HeadingProps,
+    HStack,
+    IconButton,
     Kbd,
     Link,
     Text,
-    Divider,
-    useColorMode,
     TextProps,
-    BoxProps,
-    HeadingProps,
-    AlertProps,
-    HStack,
-    IconButton,
-    CodeProps,
+    useColorMode,
     useColorModeValue,
 } from '@chakra-ui/react';
+import NextImage from 'next/image';
 import NextLink from 'next/link';
+import { FiGithub, FiMail, FiTwitter } from 'react-icons/fi';
 
-import { FiTwitter, FiGithub, FiMail } from 'react-icons/fi';
-
-// #0F9D58
 const Table = (props) => (
     <Box as="table" textAlign="left" mt="32px" width="full" {...props} />
 );
@@ -189,4 +188,5 @@ export const MDXComponents = {
     FiTwitter,
     FiGithub,
     FiMail,
+    Image: NextImage,
 };

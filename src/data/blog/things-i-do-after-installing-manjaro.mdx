@@ -1,10 +1,18 @@
 ---
-title: 'Setup a clean and beautiful development environment with Manjaro Gnome'
+title: 'Setup a Clean and Beautiful Development Environment with Manjaro Gnome'
 publishedAt: '2022-04-23'
 summary: "If you ask me a question, and I don't know the answer, I'm gonna tell you that I don't know. But I bet you what. I know how to find the answer, and I will find the answer."
 ---
 
-If you stop and think about it, the more clean and enjoyable your working environment is, the more productive you are.
+<Image
+    alt={`Banner`}
+    src={`/assets/images/manjaro-gnome-setup/banner.png`}
+    width={700}
+    height={394}
+    priority
+/>
+If you stop and think about it, the more clean and enjoyable your working environment
+is, the more productive you are.
 
 In this article I will help you to setup a minimalistic, clean and beautiful working environment in your Manjaro Gnome.
 
@@ -35,3 +43,35 @@ Pointing to the fastest mirror simply means to tell your system to download pack
 Now to point to the fastest mirror open your terminal and run the following command
 
 `sudo pacman-mirrors --fasttrack`
+
+This process can take a while please wait until it finishes.
+
+### 2. Update Your System
+
+Depending on when the ISO file was downloaded there might be some updates that has been brought to the pre-installed packages, so it is always good to update your system so that you can benefit from new features, security vulnerabilities fixes or performance issues that has been added.
+
+To update your system type the following command in your terminal
+
+`sudo pacman -Syyu`
+
+### 3. Enable SSD TRIM
+
+TRIM is a command that enables the operating system to communicate with the SSD and tells it which data blocks are no longer in use so that it can erase them. Using TRIM can significantly improve the writing speed of the SSD and also boost its longevity.
+
+To enable SSD Trim type the following commands in your terminal
+
+`sudo systemctl enable fstrim.timer && sudo systemctl start fstrim.timer`
+
+Run the following command `sudo systemctl status fstrim.timer` to see if it has successfully started
+
+```bash{3}
+● fstrim.timer - Discard unused blocks once a week
+     Loaded: loaded (/usr/lib/systemd/system/fstrim.timer; enabled; vendor preset: disabled)
+     Active: active (waiting) since Wed 2022-05-11 01:47:35 CAT; 1h 8min ago
+      Until: Wed 2022-05-11 01:47:35 CAT; 1h 8min ago
+    Trigger: Mon 2022-05-16 00:04:10 CAT; 4 days left
+   Triggers: ● fstrim.service
+       Docs: man:fstrim
+```
+
+You can see something like above notice the hightlighted line that means you it is activated.

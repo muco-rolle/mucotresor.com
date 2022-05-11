@@ -50,21 +50,15 @@ const HomePage = ({ posts }: HomePageProps) => {
                                     fontWeight="900"
                                     target="_blank"
                                 >
-                                    Leapa
+                                    Leapa.
                                 </Box>
                             </Text>
                         </Stack>
 
                         <Text>
-                            I&apos;m a full-stack developer, building things
-                            with code, mainly with:
-                            <Box as="strong">
-                                {' '}
-                                <br />
-                                Typescript, React & Next.js
-                            </Box>
-                            , <Box as="strong">Node.js & Adonis.js</Box>, and{' '}
-                            <Box as="strong">GraphQL</Box>.
+                            Writing <strong>Node.js</strong> and{' '}
+                            <strong>React</strong> Apps in{' '}
+                            <strong>Typescript</strong>.
                         </Text>
                     </Stack>
 
