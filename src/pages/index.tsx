@@ -1,3 +1,12 @@
+import { Bio } from "~/components";
+import { PageLayout } from "~/layouts";
+
 export default function HomePage() {
-  return <h1 className="text-3xl">Home Page</h1>;
+  return (
+    <PageLayout>
+      <div className="-mt-12 sm:mt-0">
+        <Bio />
+      </div>
+    </PageLayout>
+  );
 }
