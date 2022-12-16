@@ -1,7 +1,7 @@
 import type { DefaultSeoProps } from "next-seo";
 
 const title = `Trésor Muco`;
-const description = `Welcome to my digital space where I share what I'm learning about web development.`;
+const description = `Welcome to my digital garden where I share what I'm learning about software development and become a better software developer.`;
 const domain = `mucotresor.com`;
 const twitter = `@mucotreso`;
 const meta = `Developer Advocate at Leapa`;

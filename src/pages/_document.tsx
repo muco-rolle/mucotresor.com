@@ -13,7 +13,7 @@ export default function Document() {
         />
       </Head>
 
-      <body className="antialiased bg-gray-900 selection:bg-purple-50 selection:text-purple-500">
+      <body className="antialiased bg-zinc-900 selection:bg-purple-50 selection:text-purple-500">
         <Main />
         <NextScript />
       </body>
