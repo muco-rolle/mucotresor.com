@@ -1,13 +1,4 @@
-import { theme, ThemeOverride } from "@chakra-ui/react";
-import { Inter } from "@next/font/google";
-
-const font = Inter({
-  display: "swap",
-  style: "normal",
-  subsets: ["latin"],
-  fallback: ["sans-serif"],
-  adjustFontFallback: true,
-});
+import { ThemeOverride } from "@chakra-ui/react";
 
 export const foundations: ThemeOverride = {
   config: {
@@ -17,7 +8,7 @@ export const foundations: ThemeOverride = {
   styles: {
     global: {
       "::selection": {
-        bg: "purple.50",
+        bg: "transparent",
         color: "purple.500",
       },
 
@@ -25,12 +16,6 @@ export const foundations: ThemeOverride = {
         bg: "zinc.900",
       },
     },
-  },
-
-  fonts: {
-    ...theme.fonts,
-    heading: font.style.fontFamily,
-    body: font.style.fontFamily,
   },
 
   colors: {
@@ -45,6 +30,19 @@ export const foundations: ThemeOverride = {
       700: "#3f3f46",
       800: "#27272a",
       900: "#18181b",
+    },
+
+    rose: {
+      50: "#fff1f2",
+      100: "#ffe4e6",
+      200: "#fecdd3",
+      300: "#fda4af",
+      400: "#fb7185",
+      500: "#f43f5e",
+      600: "#e11d48",
+      700: "#be123c",
+      800: "#9f1239",
+      900: "#881337",
     },
   },
 };
