@@ -1,27 +1,16 @@
-import cx from "clsx";
-import type { AppProps } from "next/app";
-import "~/styles/globals.css";
-
-import { Inter } from "@next/font/google";
+import { ChakraProvider } from "@chakra-ui/react";
 import { DefaultSeo } from "next-seo";
+import type { AppProps } from "next/app";
 import { seo } from "~/config/seo";
+import { theme } from "~/theme";
 
-const inter = Inter({
-  display: "swap",
-  style: "normal",
-  subsets: ["latin"],
-  fallback: ["sans-serif"],
-  adjustFontFallback: true,
-  variable: "--font-inter",
-});
-
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <ChakraProvider theme={theme}>
       <DefaultSeo {...seo} />
-      <main className={cx("font-sans", inter.variable)}>
-        <Component {...pageProps} />
-      </main>
-    </>
+      <Component {...pageProps} />
+    </ChakraProvider>
   );
 }
+
+export default App;

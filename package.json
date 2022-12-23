@@ -6,29 +6,29 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "gen:theme-typings": "chakra-cli tokens ./src/theme/index.ts",
+    "postinstall": "npm run gen:theme-typings"
   },
   "dependencies": {
-    "@next/font": "^13.0.6",
-    "@tabler/icons": "^1.116.1",
-    "@types/node": "18.11.12",
+    "@chakra-ui/react": "^2.4.4",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "@next/font": "13.1.0",
+    "@types/node": "18.11.17",
     "@types/react": "18.0.26",
     "@types/react-dom": "18.0.9",
-    "clsx": "^1.2.1",
-    "eslint": "8.29.0",
-    "eslint-config-next": "13.0.6",
-    "next": "13.0.6",
+    "eslint": "8.30.0",
+    "eslint-config-next": "13.1.0",
+    "framer-motion": "^6",
+    "next": "13.1.0",
     "next-seo": "^5.15.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-use": "^17.4.0",
     "typescript": "4.9.4"
   },
   "devDependencies": {
-    "@tailwindcss/forms": "^0.5.3",
-    "@tailwindcss/line-clamp": "^0.4.2",
-    "autoprefixer": "^10.4.13",
-    "postcss": "^8.4.19",
-    "tailwindcss": "^3.2.4"
+    "@chakra-ui/cli": "^2.2.1",
+    "@chakra-ui/styled-system": "^2.5.0"
   }
 }
